@@ -64,12 +64,27 @@ Quartz — это коллаборация **Obsidian** и **OneNote**: от Obs
 - Светлая и тёмная темы, свои темы, режим E-Ink.
 - Полноэкранный режим и режим фокуса.
 
-## Как начать
-1. Скачайте `Quartz.html` из [релизов](https://github.com/Finn013/Quartz/releases/latest).
-2. Откройте файл в браузере.
-3. Нажмите «＋ Книга» и начните писать. Подробная инструкция есть в самом приложении (⚙️ → «Инструкция»).
+## Скачать
 
-> Данные хранятся в браузере на этом устройстве. Делайте резервные копии или включите синхронизацию.
+| Платформа | Файл | Статус |
+|---|---|---|
+| Любое устройство с браузером | `Quartz.html` | ✅ Доступно |
+| Android 7+ | `Quartz.apk` | ✅ Доступно |
+| Windows 10/11 | `Quartz-Setup.exe`, `Quartz-Portable.exe` | ✅ Доступно |
+| iPhone, iPad, Mac | [finn013.github.io/Quartz](https://finn013.github.io/Quartz/) | ✅ Доступно |
+
+Все файлы — в [релизах](https://github.com/Finn013/Quartz/releases/latest).
+
+**iPhone/iPad:** откройте ссылку в Safari → «Поделиться» → «На экран Домой».
+**Mac:** Safari → «Файл» → «Добавить в Dock» (в Chrome/Edge — значок установки в адресной строке).
+После первого открытия Quartz работает без интернета.
+
+> Сборки Windows не подписаны: если SmartScreen предупредит, нажмите «Подробнее» → «Выполнить в любом случае».
+
+## Как начать
+Откройте Quartz, нажмите «＋ Книга» и начните писать. Подробная инструкция есть в самом приложении (⚙️ → «Инструкция»).
+
+> Данные хранятся на этом устройстве. Делайте резервные копии или включите синхронизацию.
 
 ## Идеи и ошибки
 Пишите в [Issues](https://github.com/Finn013/Quartz/issues).
@@ -94,9 +109,12 @@ Quartz is a blend of **Obsidian** and **OneNote**: Markdown, `[[wiki links]]`, b
 - 💾 Export to `.md`, `.html`, `.json`, `.zip`; full `.quartz` backup; sync via GitHub token or your own REST server.
 - 🌗 Light, dark and custom themes, E-Ink mode, fullscreen and focus mode.
 
-## Getting started
-1. Download `Quartz.html` from [Releases](https://github.com/Finn013/Quartz/releases/latest).
-2. Open it in a browser.
-3. Tap “＋ Книга” (New notebook) and start writing.
+## Download
+- **Any browser:** `Quartz.html`
+- **Android 7+:** `Quartz.apk`
+- **Windows 10/11:** `Quartz-Setup.exe` or `Quartz-Portable.exe`
+- **iPhone, iPad, Mac:** open [finn013.github.io/Quartz](https://finn013.github.io/Quartz/) in Safari and add it to the Home Screen / Dock.
 
-> The interface is in Russian. Data lives in your browser on this device — keep backups or enable sync.
+All files are in [Releases](https://github.com/Finn013/Quartz/releases/latest). Windows builds are unsigned; if SmartScreen warns, click “More info” → “Run anyway”.
+
+> The interface is in Russian. Data lives on your device — keep backups or enable sync.
