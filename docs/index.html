@@ -1800,7 +1800,7 @@ document.querySelectorAll('.rb-tab[data-rb]').forEach(t=>t.onclick=()=>{
   rbar.classList.remove('rb-min'); db.settings.ribbonMin=false;
 });
 document.getElementById('rbMin').onclick=()=>{ rbar.classList.toggle('rb-min'); db.settings.ribbonMin=rbar.classList.contains('rb-min'); saveDB(); };
-rbar.querySelectorAll('.rb-btn,.rb-tab').forEach(b=>b.addEventListener('mousedown',e=>e.preventDefault()));
+rbar.querySelectorAll('.rb-btn,.rb-tab').forEach(b=>b.addEventListener('mousedown',e=>{ if(e.target.closest&&e.target.closest('input,select,textarea')) return; e.preventDefault(); }));
 document.getElementById('rbTag').onclick=()=>document.getElementById('btnAddTag').click();
 document.getElementById('rbSide').onclick=()=>document.getElementById('btnToggleSidebar').click();
 document.getElementById('rbBack').onclick=()=>document.getElementById('backlinksPanel').classList.toggle('hidden');
@@ -2456,13 +2456,14 @@ function qsFlatten(root){
 let qsRange=null;
 document.addEventListener('selectionchange',()=>{ const sl=getSelection(); if(!sl.rangeCount||!sl.anchorNode||!mdPreviewEl.contains(sl.anchorNode)) return;
   const el=sl.anchorNode.nodeType===1?sl.anchorNode:sl.anchorNode.parentElement; if(!el||el.closest('.qwin,.qbar')) return;
-  if(!sl.isCollapsed){ qsRange=sl.getRangeAt(0).cloneRange(); qsCaret=null; } else{ qsRange=null; qsCaret=sl.getRangeAt(0).cloneRange(); }
+  if(!sl.isCollapsed){ qsRange=sl.getRangeAt(0).cloneRange(); qsRangeT=Date.now(); qsCaret=null; } else{ qsCaret=sl.getRangeAt(0).cloneRange(); }
   const fs=Math.round(parseFloat(getComputedStyle(el).fontSize)); const fi=document.getElementById('fSize'); if(fi&&document.activeElement!==fi&&fs>=9&&fs<=50) fi.value=fs; });
 function qsApply(prop,val,keep){
   const sl=getSelection(); let r=null;
   const inEd=sl.rangeCount&&sl.anchorNode&&mdPreviewEl.contains(sl.anchorNode)&&!((sl.anchorNode.nodeType===1?sl.anchorNode:sl.anchorNode.parentElement).closest('.qwin,.qbar'));
-  if(inEd&&sl.isCollapsed){ qsPendSet(prop,val); return; }
-  if(inEd) r=sl.getRangeAt(0); else if(qsRange&&mdPreviewEl.contains(qsRange.commonAncestorContainer)) r=qsRange;
+  const hold=qsRange&&mdPreviewEl.contains(qsRange.commonAncestorContainer)&&Date.now()-qsRangeT<8000;
+  if(inEd&&sl.isCollapsed&&!hold){ qsPendSet(prop,val); return; }
+  if(inEd&&!sl.isCollapsed) r=sl.getRangeAt(0); else if(qsRange&&mdPreviewEl.contains(qsRange.commonAncestorContainer)) r=qsRange;
   if((!r||r.collapsed)&&qsCaret&&mdPreviewEl.contains(qsCaret.startContainer)){ mdPreviewEl.focus(); sl.removeAllRanges(); sl.addRange(qsCaret); qsPendSet(prop,val); return; }
   if(!r||r.collapsed){ uiAlert('Выделите текст или поставьте курсор там, где хотите писать с новым оформлением.'); return; }
   const root=r.commonAncestorContainer.nodeType===3?r.commonAncestorContainer.parentNode:r.commonAncestorContainer, w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT), items=[];
@@ -2476,18 +2477,20 @@ function qsApply(prop,val,keep){
     const par=mid.parentElement; let sp;
     if(par.classList.contains('qs')&&par.childNodes.length===1) sp=par; else{ sp=document.createElement('span'); sp.className='qs'; mid.replaceWith(sp); sp.appendChild(mid); }
     sp.dataset[prop]=String(val); sp.setAttribute('style',qsStyleStr(sp.dataset)); made.unshift(sp); });
-  mdPreviewEl.focus(); const nr=document.createRange(); nr.setStartBefore(made[0]); nr.setEndAfter(made[made.length-1]); sl.removeAllRanges(); sl.addRange(nr); qsRange=nr.cloneRange();
+  mdPreviewEl.focus(); const nr=document.createRange(), f0=made[0].firstChild, l0=made[made.length-1].lastChild; nr.setStart(f0,0); nr.setEnd(l0,l0.nodeType===3?l0.nodeValue.length:l0.childNodes.length); sl.removeAllRanges(); sl.addRange(nr); qsRange=nr.cloneRange(); qsRangeT=Date.now();
   syncFromPreview(); if(val===''&&!keep) renderMdPreview();
 }
-function qsClear(){ const sl=getSelection(); if(sl.rangeCount&&sl.isCollapsed&&sl.anchorNode&&mdPreviewEl.contains(sl.anchorNode)){ qsPending=null; document.getElementById('statusLeft').textContent='Оформление для следующих слов сброшено'; return; } if(!(sl.rangeCount&&!sl.isCollapsed&&mdPreviewEl.contains(sl.anchorNode))&&!qsRange){ uiAlert('Выделите текст, у которого нужно убрать оформление.'); return; } ['size','color','bg','font'].forEach(k=>qsApply(k,'',true)); renderMdPreview(); }
-const qsSize=()=>{ const r=qsRange||(getSelection().rangeCount&&getSelection().getRangeAt(0)); const n=r&&r.startContainer; const el=n&&(n.nodeType===1?n:n.parentElement); return el?Math.round(parseFloat(getComputedStyle(el).fontSize))||16:16; };
+function qsClear(){ const sl=getSelection(); if(sl.rangeCount&&sl.isCollapsed&&sl.anchorNode&&mdPreviewEl.contains(sl.anchorNode)&&!(qsRange&&Date.now()-qsRangeT<8000)){ qsPending=null; document.getElementById('statusLeft').textContent='Оформление для следующих слов сброшено'; return; } if(!(sl.rangeCount&&!sl.isCollapsed&&mdPreviewEl.contains(sl.anchorNode))&&!qsRange){ uiAlert('Выделите текст, у которого нужно убрать оформление.'); return; } ['size','color','bg','font'].forEach(k=>qsApply(k,'',true)); renderMdPreview(); }
+const qsSize=()=>{ const sl=getSelection(), r=qsRange||(sl.rangeCount&&sl.getRangeAt(0)); if(!r) return 16; let n=r.startContainer; if(n.nodeType===1) n=n.childNodes[r.startOffset]||n;
+  if(n.nodeType===1){ const w=document.createTreeWalker(n,NodeFilter.SHOW_TEXT); if(w.nextNode()) n=w.currentNode; } const el=n.nodeType===1?n:n.parentElement; return el?Math.round(parseFloat(getComputedStyle(el).fontSize))||16:16; };
 const pickColor=i=>{ try{ i.showPicker?i.showPicker():i.click(); }catch(e){ i.click(); } };
 document.querySelectorAll('[data-q],[data-bg],[data-fc],#rbFC,#rbBG').forEach(b=>b.addEventListener('mousedown',e=>e.preventDefault()));
-document.querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>{ const k=b.dataset.q; if(k==='reset') qsClear(); else qsApply('size',qsStep(qsSize(),k==='s+'?1:-1)); });
+document.querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>{ const k=b.dataset.q; if(k==='reset') qsClear(); else qsApply('size',qsStep(qsPending&&+qsPending.size?+qsPending.size:qsSize(),k==='s+'?1:-1)); });
 document.querySelectorAll('[data-bg]').forEach(b=>b.onclick=()=>qsApply('bg',b.dataset.bg));
 document.querySelectorAll('[data-fc]').forEach(b=>b.onclick=()=>qsApply('color',''));
 document.getElementById('rbFC').onclick=()=>pickColor(document.getElementById('fColor')); document.getElementById('fColor').addEventListener('change',e=>qsApply('color',e.target.value));
 document.getElementById('rbBG').onclick=()=>pickColor(document.getElementById('fBg')); document.getElementById('fBg').addEventListener('change',e=>qsApply('bg',e.target.value));
+document.getElementById('fSize').addEventListener('focus',e=>{ const t=e.target; setTimeout(()=>{ try{ t.select(); }catch(x){} },0); });
 document.getElementById('fSize').addEventListener('change',e=>{ const v=Math.min(50,Math.max(9,parseInt(e.target.value)||16)); e.target.value=v; qsApply('size',v); });
 document.getElementById('fFont').addEventListener('change',e=>{ qsApply('font',e.target.value); e.target.value=''; });
 
@@ -2680,7 +2683,8 @@ colBar.querySelectorAll('[data-cm]').forEach(b=>{ b.addEventListener('mousedown'
 document.addEventListener('selectionchange',()=>{ const sl=getSelection(), n=sl.rangeCount&&sl.anchorNode, el=n&&(n.nodeType===1?n:n.parentElement); colBar.style.display=(el&&mdPreviewEl.contains(el)&&el.closest('.qcol')&&!el.closest('.qwin'))?'flex':'none'; });
 
 /* ===== v23: исправления, выравнивание, сообщения, полный экран ===== */
-let qsCaret=null, _qManual=0, _errN=0;
+let qsCaret=null, qsRangeT=0, _qManual=0, _errN=0;
+mdPreviewEl.addEventListener('pointerdown',()=>{ qsRange=null; },true); mdPreviewEl.addEventListener('keydown',()=>{ qsRange=null; },true);
 const QSIZES=[9,10,11,12,14,16,18,20,22,24,28,32,36,40,44,50];
 function qsStep(cur,dir){ if(dir>0){ const v=QSIZES.find(z=>z>cur); return v||50; } const l=QSIZES.filter(z=>z<cur); return l.length?l[l.length-1]:9; }
 const _tc=document.createElement('div'); _tc.id='qToasts'; document.body.appendChild(_tc); let _lt='', _ltt=0;
