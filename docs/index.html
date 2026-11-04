@@ -2645,6 +2645,7 @@ function colUnwrap(){
   b.replaceWith(...parts); syncFromPreview();
 }
 document.getElementById('rbCU').onclick=colUnwrap;
+document.getElementById('rbC2').onclick=()=>insertCols(2); document.getElementById('rbC3').onclick=()=>insertCols(3); document.getElementById('rbCA').onclick=colAdd; document.getElementById('rbCD').onclick=colDel;
 
 /* ===== v22: перемещение текста между колонками и обмен колонок ===== */
 function colCtx(){
