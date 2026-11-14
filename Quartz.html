@@ -625,7 +625,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
 
         <!-- MARKDOWN EDITOR -->
         <div id="mdEditor" class="flex-1 flex flex-col overflow-hidden">
-          <div id="mdToolbar" class="ribbon surface2 border-b border-t-c"><div class="rb-tabs"><button class="rb-tab active" data-rb="home">Главная</button><button class="rb-tab" data-rb="insert">Вставка</button><button class="rb-tab" data-rb="view">Вид</button><button class="rb-tab" data-rb="draw">Рисование</button><button class="rb-tab" data-rb="schema">Схема</button><span style="flex:1"></span><button class="rb-tab" id="rbMin" title="Свернуть / развернуть ленту"><svg class="qi"><use href="#qi-chevup"/></svg></button></div><div class="rb-panes"><div class="rb-pane active" data-pane="home"><div class="rb-group"><div class="rb-row"><button class="rb-btn io" id="rbPaint" title="Формат по образцу"><span class="rb-ic"><svg class="qi"><use href="#qi-painter"/></svg></span><span class="rb-tx">Формат по образцу</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn io" data-fmt="b" title="Жирный"><span class="rb-ic"><svg class="qi"><use href="#qi-bold"/></svg></span><span class="rb-tx">Жирный</span></button><button class="rb-btn io" data-fmt="i" title="Курсив"><span class="rb-ic"><svg class="qi"><use href="#qi-italic"/></svg></span><span class="rb-tx">Курсив</span></button><button class="rb-btn io" data-fmt="u" title="Подчёркнутый"><span class="rb-ic"><svg class="qi"><use href="#qi-under"/></svg></span><span class="rb-tx">Подчёркнутый</span></button><button class="rb-btn io" data-fmt="s" title="Зачёркнутый"><span class="rb-ic"><svg class="qi"><use href="#qi-strike"/></svg></span><span class="rb-tx">Зачёркнутый</span></button><button class="rb-btn io" data-fmt="code" title="Код"><span class="rb-ic"><svg class="qi"><use href="#qi-code"/></svg></span><span class="rb-tx">Код</span></button><button class="rb-btn io" data-fmt="spoil" title="Скрытый текст"><span class="rb-ic"><svg class="qi"><use href="#qi-spoil"/></svg></span><span class="rb-tx">Скрыть</span></button></div></div><div class="rb-group"><div class="rb-row"><select id="fFont" class="rb-sel" title="Шрифт"><option value="">Шрифт</option><option value="arial">Arial</option><option value="georgia">Georgia</option><option value="times">Times New Roman</option><option value="verdana">Verdana</option><option value="courier">Courier New</option><option value="comic">Comic Sans</option></select><button class="rb-btn io" data-q="s-" title="Уменьшить размер"><span class="rb-ic"><b class="qt">A−</b></span><span class="rb-tx">Уменьшить размер</span></button><input id="fSize" class="rb-num" type="number" min="9" max="50" value="16" title="Размер 9–50"><button class="rb-btn io" data-q="s+" title="Увеличить размер"><span class="rb-ic"><b class="qt">A+</b></span><span class="rb-tx">Увеличить размер</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn io" data-ali="left" title="Текст слева"><span class="rb-ic"><svg class="qi"><use href="#qi-al"/></svg></span><span class="rb-tx">Текст слева</span></button><button class="rb-btn io" data-ali="center" title="По центру"><span class="rb-ic"><svg class="qi"><use href="#qi-ac"/></svg></span><span class="rb-tx">По центру</span></button><button class="rb-btn io" data-ali="right" title="Справа"><span class="rb-ic"><svg class="qi"><use href="#qi-ar"/></svg></span><span class="rb-tx">Справа</span></button><button class="rb-btn io" data-ali="justify" title="По ширине"><span class="rb-ic"><svg class="qi"><use href="#qi-aj"/></svg></span><span class="rb-tx">По ширине</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn dd" id="rbFC" title="Цвет текста"><span class="rb-ic"><b class="qt">A</b><i class="cbar" id="rbFCbar" style="background:#dc2626"></i></span><span class="rb-tx">Цвет</span><svg class="qi chev"><use href="#qi-chev"/></svg></button><input type="color" id="fColor" value="#dc2626" hidden><button class="rb-btn dd" id="rbBG" title="Маркер"><span class="rb-ic"><svg class="qi"><use href="#qi-hl"/></svg><i class="cbar" id="rbBGbar" style="background:#fff176"></i></span><span class="rb-tx">Маркер</span><svg class="qi chev"><use href="#qi-chev"/></svg></button><input type="color" id="fBg" value="#fff176" hidden><button class="rb-btn io" data-q="reset" title="Сбросить оформление"><span class="rb-ic"><svg class="qi"><use href="#qi-noformat"/></svg></span><span class="rb-tx">Сбросить оформление</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn io" data-fmt="ul" title="Маркированный список"><span class="rb-ic"><svg class="qi"><use href="#qi-ul"/></svg></span><span class="rb-tx">Маркированный список</span></button><button class="rb-btn io" data-fmt="ol" title="Нумерованный список"><span class="rb-ic"><svg class="qi"><use href="#qi-ol"/></svg></span><span class="rb-tx">Нумерованный список</span></button><button class="rb-btn io" data-fmt="task" title="Задача"><span class="rb-ic"><svg class="qi"><use href="#qi-task"/></svg></span><span class="rb-tx">Задача</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn dd" id="rbST" title="Стили"><span class="rb-ic"><svg class="qi"><use href="#qi-heading"/></svg></span><span class="rb-tx">Стили</span><svg class="qi chev"><use href="#qi-chev"/></svg></button><button class="rb-btn io" data-fmt="quote" title="Цитата"><span class="rb-ic"><svg class="qi"><use href="#qi-quote"/></svg></span><span class="rb-tx">Цитата</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn" id="rbTag" title="Тег"><span class="rb-ic"><svg class="qi"><use href="#qi-tag"/></svg></span><span class="rb-tx">Тег</span></button><button class="rb-btn io" id="rbFav" title="Избранное"><span class="rb-ic">☆</span><span class="rb-tx">Избранное</span></button><button class="rb-btn io" id="rbLock" title="Пароль"><span class="rb-ic"><svg class="qi"><use href="#qi-lock"/></svg></span><span class="rb-tx">Пароль</span></button></div></div></div><div class="rb-pane" data-pane="insert"><div class="rb-group"><div class="rb-row"><button class="rb-btn" id="btnMdTable" title="Таблица"><span class="rb-ic"><svg class="qi"><use href="#qi-table"/></svg></span><span class="rb-tx">Таблица</span></button><button class="rb-btn" id="rbImg" title="Картинка"><span class="rb-ic"><svg class="qi"><use href="#qi-image"/></svg></span><span class="rb-tx">Картинка</span></button><button class="rb-btn io" data-fmt="hr" title="Разделитель"><span class="rb-ic"><svg class="qi"><use href="#qi-hr"/></svg></span><span class="rb-tx">Разделитель</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn" data-fmt="url" title="Ссылка"><span class="rb-ic"><svg class="qi"><use href="#qi-globe"/></svg></span><span class="rb-tx">Ссылка</span></button><button class="rb-btn" id="btnMdLink" title="Страница"><span class="rb-ic"><svg class="qi"><use href="#qi-file"/></svg></span><span class="rb-tx">Страница</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn io" id="rbC2" title="2 колонки"><span class="rb-ic"><svg class="qi"><use href="#qi-col2"/></svg></span><span class="rb-tx">2 колонки</span></button><button class="rb-btn io" id="rbC3" title="3 колонки"><span class="rb-ic"><svg class="qi"><use href="#qi-col3"/></svg></span><span class="rb-tx">3 колонки</span></button><button class="rb-btn io" id="rbCA" title="Добавить колонку"><span class="rb-ic"><svg class="qi"><use href="#qi-colplus"/></svg></span><span class="rb-tx">Добавить колонку</span></button><button class="rb-btn io" id="rbCD" title="Убрать колонку"><span class="rb-ic"><svg class="qi"><use href="#qi-colminus"/></svg></span><span class="rb-tx">Убрать колонку</span></button><button class="rb-btn" id="rbCU" title="Вернуть колонки в обычный текст"><span class="rb-ic"><svg class="qi"><use href="#qi-uncol"/></svg></span><span class="rb-tx">Разобрать</span></button></div></div></div><div class="rb-pane" data-pane="view"><div class="rb-group"><div class="rb-row"><button class="rb-btn" id="rbSide" title="Меню"><span class="rb-ic"><svg class="qi"><use href="#qi-panel"/></svg></span><span class="rb-tx">Меню</span></button><button class="rb-btn" id="rbBack" title="Обратные ссылки"><span class="rb-ic"><svg class="qi"><use href="#qi-link"/></svg></span><span class="rb-tx">Обратные ссылки</span></button><button class="rb-btn" id="rbHome" title="Главная"><span class="rb-ic"><svg class="qi"><use href="#qi-home"/></svg></span><span class="rb-tx">Главная</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn" id="rbFull" title="Во весь экран"><span class="rb-ic">⛶</span><span class="rb-tx">Во весь экран</span></button><button class="rb-btn" id="rbWinV" title="Скрыть окна"><span class="rb-ic"><svg class="qi"><use href="#qi-win"/></svg></span><span class="rb-tx">Скрыть окна</span></button><button class="rb-btn" id="rbDrawV" title="Скрыть рисунок"><span class="rb-ic"><svg class="qi"><use href="#qi-pen"/></svg></span><span class="rb-tx">Скрыть рисунок</span></button></div></div></div><div class="rb-pane" data-pane="draw"><div class="rb-group"><div class="rb-row"><button class="rb-btn io" data-dt="select" title="Выбор"><span class="rb-ic"><svg class="qi"><use href="#qi-select"/></svg></span><span class="rb-tx">Выбор</span></button><button class="rb-btn io" data-dt="pen" title="Перо"><span class="rb-ic"><svg class="qi"><use href="#qi-pen"/></svg></span><span class="rb-tx">Перо</span></button><button class="rb-btn io" data-dt="line" title="Линия"><span class="rb-ic"><svg class="qi"><use href="#qi-line"/></svg></span><span class="rb-tx">Линия</span></button><button class="rb-btn io" data-dt="arrow" title="Стрелка"><span class="rb-ic"><svg class="qi"><use href="#qi-arrow"/></svg></span><span class="rb-tx">Стрелка</span></button><button class="rb-btn io" data-dt="rect" title="Рамка"><span class="rb-ic"><svg class="qi"><use href="#qi-rect"/></svg></span><span class="rb-tx">Рамка</span></button><button class="rb-btn io" data-dt="ellipse" title="Эллипс"><span class="rb-ic"><svg class="qi"><use href="#qi-ellipse"/></svg></span><span class="rb-tx">Эллипс</span></button><button class="rb-btn io" data-dt="label" title="Надпись"><span class="rb-ic"><svg class="qi"><use href="#qi-type"/></svg></span><span class="rb-tx">Надпись</span></button><button class="rb-btn io" data-dt="erase" title="Ластик"><span class="rb-ic"><svg class="qi"><use href="#qi-eraser"/></svg></span><span class="rb-tx">Ластик</span></button><button class="rb-btn" data-dt="off" title="Текст"><span class="rb-ic"><svg class="qi"><use href="#qi-cursor"/></svg></span><span class="rb-tx">Текст</span></button></div></div><div class="rb-group"><div class="rb-row"><label class="rb-field" title="Цвет"><input type="color" id="dColor" value="#6d28d9"></label><label class="rb-field" title="Толщина"><select id="dWidth" class="rb-sel"><option value="1">1 px</option><option value="2" selected>2 px</option><option value="4">4 px</option><option value="8">8 px</option></select></label><label class="rb-btn rb-chk" title="Заливка"><input type="checkbox" id="dFill"><span class="rb-tx">Заливка</span></label></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn io" data-da="undo" title="Отменить"><span class="rb-ic"><svg class="qi"><use href="#qi-undo"/></svg></span><span class="rb-tx">Отменить</span></button><button class="rb-btn io" data-da="del" title="Удалить"><span class="rb-ic"><svg class="qi"><use href="#qi-trash"/></svg></span><span class="rb-tx">Удалить</span></button><button class="rb-btn io" data-da="clear" title="Очистить всё"><span class="rb-ic"><svg class="qi"><use href="#qi-clear"/></svg></span><span class="rb-tx">Очистить всё</span></button></div></div></div><div class="rb-pane" data-pane="schema"><div class="rb-group"><div class="rb-row"><button class="rb-btn" id="rbWin" title="Окно схемы"><span class="rb-ic"><svg class="qi"><use href="#qi-net"/></svg></span><span class="rb-tx">Окно схемы</span></button><button class="rb-btn" id="rbPgWin" title="Страница в окне"><span class="rb-ic"><svg class="qi"><use href="#qi-file"/></svg></span><span class="rb-tx">Страница в окне</span></button><button class="rb-btn" id="rbWinToggle" title="Скрыть окна"><span class="rb-ic"><svg class="qi"><use href="#qi-eye"/></svg></span><span class="rb-tx">Скрыть окна</span></button></div></div></div></div><div class="rb-menu" id="mnFC"><div class="sw-grid"><button class="sw" data-fcc="#1f2937" style="background:#1f2937" title="#1f2937"></button><button class="sw" data-fcc="#6b7280" style="background:#6b7280" title="#6b7280"></button><button class="sw" data-fcc="#dc2626" style="background:#dc2626" title="#dc2626"></button><button class="sw" data-fcc="#ea580c" style="background:#ea580c" title="#ea580c"></button><button class="sw" data-fcc="#ca8a04" style="background:#ca8a04" title="#ca8a04"></button><button class="sw" data-fcc="#16a34a" style="background:#16a34a" title="#16a34a"></button><button class="sw" data-fcc="#0d9488" style="background:#0d9488" title="#0d9488"></button><button class="sw" data-fcc="#0284c7" style="background:#0284c7" title="#0284c7"></button><button class="sw" data-fcc="#2563eb" style="background:#2563eb" title="#2563eb"></button><button class="sw" data-fcc="#7c3aed" style="background:#7c3aed" title="#7c3aed"></button><button class="sw" data-fcc="#c026d3" style="background:#c026d3" title="#c026d3"></button><button class="sw" data-fcc="#db2777" style="background:#db2777" title="#db2777"></button></div><button class="mi" data-fc="">⌀ Без цвета</button></div><div class="rb-menu" id="mnBG"><div class="sw-grid"><button class="sw" data-bg="#fff176" style="background:#fff176" title="#fff176"></button><button class="sw" data-bg="#ffe0b2" style="background:#ffe0b2" title="#ffe0b2"></button><button class="sw" data-bg="#ffccbc" style="background:#ffccbc" title="#ffccbc"></button><button class="sw" data-bg="#f8bbd0" style="background:#f8bbd0" title="#f8bbd0"></button><button class="sw" data-bg="#e1bee7" style="background:#e1bee7" title="#e1bee7"></button><button class="sw" data-bg="#d1c4e9" style="background:#d1c4e9" title="#d1c4e9"></button><button class="sw" data-bg="#c5cae9" style="background:#c5cae9" title="#c5cae9"></button><button class="sw" data-bg="#bbdefb" style="background:#bbdefb" title="#bbdefb"></button><button class="sw" data-bg="#b2ebf2" style="background:#b2ebf2" title="#b2ebf2"></button><button class="sw" data-bg="#b2dfdb" style="background:#b2dfdb" title="#b2dfdb"></button><button class="sw" data-bg="#c8e6c9" style="background:#c8e6c9" title="#c8e6c9"></button><button class="sw" data-bg="#dcedc8" style="background:#dcedc8" title="#dcedc8"></button></div><button class="mi" data-bg="">⌀ Без маркера</button></div><div class="rb-menu st" id="mnST"><button class="mi" data-fmt="h1"><span style="font-size:20px;font-weight:700">Заголовок 1</span></button><button class="mi" data-fmt="h2"><span style="font-size:17px;font-weight:700">Заголовок 2</span></button><button class="mi" data-fmt="h3"><span style="font-size:15px;font-weight:700">Заголовок 3</span></button></div></div>
+          <div id="mdToolbar" class="ribbon surface2 border-b border-t-c"><div class="rb-tabs"><button class="rb-tab active" data-rb="home">Главная</button><button class="rb-tab" data-rb="insert">Вставка</button><button class="rb-tab" data-rb="view">Вид</button><button class="rb-tab" data-rb="draw">Рисование</button><button class="rb-tab" data-rb="schema">Схема</button><span style="flex:1"></span><button class="rb-tab" id="rbMin" title="Свернуть / развернуть ленту"><svg class="qi"><use href="#qi-chevup"/></svg></button></div><div class="rb-panes"><div class="rb-pane active" data-pane="home"><div class="rb-group"><div class="rb-row"><button class="rb-btn io" id="rbPaint" title="Формат по образцу"><span class="rb-ic"><svg class="qi"><use href="#qi-painter"/></svg></span><span class="rb-tx">Формат по образцу</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn io" data-fmt="b" title="Жирный"><span class="rb-ic"><svg class="qi"><use href="#qi-bold"/></svg></span><span class="rb-tx">Жирный</span></button><button class="rb-btn io" data-fmt="i" title="Курсив"><span class="rb-ic"><svg class="qi"><use href="#qi-italic"/></svg></span><span class="rb-tx">Курсив</span></button><button class="rb-btn io" data-fmt="u" title="Подчёркнутый"><span class="rb-ic"><svg class="qi"><use href="#qi-under"/></svg></span><span class="rb-tx">Подчёркнутый</span></button><button class="rb-btn io" data-fmt="s" title="Зачёркнутый"><span class="rb-ic"><svg class="qi"><use href="#qi-strike"/></svg></span><span class="rb-tx">Зачёркнутый</span></button><button class="rb-btn io" data-fmt="code" title="Код"><span class="rb-ic"><svg class="qi"><use href="#qi-code"/></svg></span><span class="rb-tx">Код</span></button><button class="rb-btn io" data-fmt="spoil" title="Скрытый текст"><span class="rb-ic"><svg class="qi"><use href="#qi-spoil"/></svg></span><span class="rb-tx">Скрыть</span></button></div></div><div class="rb-group"><div class="rb-row"><select id="fFont" class="rb-sel" title="Шрифт"><option value="">Шрифт</option><option value="arial">Arial</option><option value="georgia">Georgia</option><option value="times">Times New Roman</option><option value="verdana">Verdana</option><option value="courier">Courier New</option><option value="comic">Comic Sans</option></select><button class="rb-btn io" data-q="s-" title="Уменьшить размер"><span class="rb-ic"><b class="qt">A−</b></span><span class="rb-tx">Уменьшить размер</span></button><input id="fSize" class="rb-num" type="number" min="9" max="50" value="16" title="Размер 9–50"><button class="rb-btn io" data-q="s+" title="Увеличить размер"><span class="rb-ic"><b class="qt">A+</b></span><span class="rb-tx">Увеличить размер</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn io" data-ali="left" title="Текст слева"><span class="rb-ic"><svg class="qi"><use href="#qi-al"/></svg></span><span class="rb-tx">Текст слева</span></button><button class="rb-btn io" data-ali="center" title="По центру"><span class="rb-ic"><svg class="qi"><use href="#qi-ac"/></svg></span><span class="rb-tx">По центру</span></button><button class="rb-btn io" data-ali="right" title="Справа"><span class="rb-ic"><svg class="qi"><use href="#qi-ar"/></svg></span><span class="rb-tx">Справа</span></button><button class="rb-btn io" data-ali="justify" title="По ширине"><span class="rb-ic"><svg class="qi"><use href="#qi-aj"/></svg></span><span class="rb-tx">По ширине</span></button><button class="rb-btn io" data-ind-a="in" title="Отступ"><span class="rb-ic"><b class="qt">⇥</b></span><span class="rb-tx">Отступ</span></button><button class="rb-btn io" data-ind-a="out" title="Убрать отступ"><span class="rb-ic"><b class="qt">⇤</b></span><span class="rb-tx">Убрать отступ</span></button><button class="rb-btn io" data-ind-a="first" title="Красная строка"><span class="rb-ic"><b class="qt">¶</b></span><span class="rb-tx">Красная строка</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn dd" id="rbFC" title="Цвет текста"><span class="rb-ic"><b class="qt">A</b><i class="cbar" id="rbFCbar" style="background:#dc2626"></i></span><span class="rb-tx">Цвет</span><svg class="qi chev"><use href="#qi-chev"/></svg></button><input type="color" id="fColor" value="#dc2626" hidden><button class="rb-btn dd" id="rbBG" title="Маркер"><span class="rb-ic"><svg class="qi"><use href="#qi-hl"/></svg><i class="cbar" id="rbBGbar" style="background:#fff176"></i></span><span class="rb-tx">Маркер</span><svg class="qi chev"><use href="#qi-chev"/></svg></button><input type="color" id="fBg" value="#fff176" hidden><button class="rb-btn io" data-q="reset" title="Сбросить оформление"><span class="rb-ic"><svg class="qi"><use href="#qi-noformat"/></svg></span><span class="rb-tx">Сбросить оформление</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn io" data-fmt="ul" title="Маркированный список"><span class="rb-ic"><svg class="qi"><use href="#qi-ul"/></svg></span><span class="rb-tx">Маркированный список</span></button><button class="rb-btn io" data-fmt="ol" title="Нумерованный список"><span class="rb-ic"><svg class="qi"><use href="#qi-ol"/></svg></span><span class="rb-tx">Нумерованный список</span></button><button class="rb-btn io" data-fmt="task" title="Задача"><span class="rb-ic"><svg class="qi"><use href="#qi-task"/></svg></span><span class="rb-tx">Задача</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn dd" id="rbST" title="Стили"><span class="rb-ic"><svg class="qi"><use href="#qi-heading"/></svg></span><span class="rb-tx">Стили</span><svg class="qi chev"><use href="#qi-chev"/></svg></button><button class="rb-btn io" data-fmt="quote" title="Цитата"><span class="rb-ic"><svg class="qi"><use href="#qi-quote"/></svg></span><span class="rb-tx">Цитата</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn" id="rbTag" title="Тег"><span class="rb-ic"><svg class="qi"><use href="#qi-tag"/></svg></span><span class="rb-tx">Тег</span></button><button class="rb-btn io" id="rbFav" title="Избранное"><span class="rb-ic">☆</span><span class="rb-tx">Избранное</span></button><button class="rb-btn io" id="rbLock" title="Пароль"><span class="rb-ic"><svg class="qi"><use href="#qi-lock"/></svg></span><span class="rb-tx">Пароль</span></button></div></div></div><div class="rb-pane" data-pane="insert"><div class="rb-group"><div class="rb-row"><button class="rb-btn" id="btnMdTable" title="Таблица"><span class="rb-ic"><svg class="qi"><use href="#qi-table"/></svg></span><span class="rb-tx">Таблица</span></button><button class="rb-btn" id="rbImg" title="Картинка"><span class="rb-ic"><svg class="qi"><use href="#qi-image"/></svg></span><span class="rb-tx">Картинка</span></button><button class="rb-btn io" data-fmt="hr" title="Разделитель"><span class="rb-ic"><svg class="qi"><use href="#qi-hr"/></svg></span><span class="rb-tx">Разделитель</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn" data-fmt="url" title="Ссылка"><span class="rb-ic"><svg class="qi"><use href="#qi-globe"/></svg></span><span class="rb-tx">Ссылка</span></button><button class="rb-btn" id="btnMdLink" title="Страница"><span class="rb-ic"><svg class="qi"><use href="#qi-file"/></svg></span><span class="rb-tx">Страница</span></button><button class="rb-btn" id="rbBtn" title="Кнопка как в Telegram"><span class="rb-ic"><b class="qt qbtn-ic">▭</b></span><span class="rb-tx">Кнопка</span></button><button class="rb-btn io rb-dim" id="rbUnlink" title="Убрать ссылку (текст останется)"><span class="rb-ic"><b class="qt">⛓</b></span><span class="rb-tx">Убрать ссылку</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn io" id="rbC2" title="2 колонки"><span class="rb-ic"><svg class="qi"><use href="#qi-col2"/></svg></span><span class="rb-tx">2 колонки</span></button><button class="rb-btn io" id="rbC3" title="3 колонки"><span class="rb-ic"><svg class="qi"><use href="#qi-col3"/></svg></span><span class="rb-tx">3 колонки</span></button><button class="rb-btn io" id="rbCA" title="Добавить колонку"><span class="rb-ic"><svg class="qi"><use href="#qi-colplus"/></svg></span><span class="rb-tx">Добавить колонку</span></button><button class="rb-btn io" id="rbCD" title="Убрать колонку"><span class="rb-ic"><svg class="qi"><use href="#qi-colminus"/></svg></span><span class="rb-tx">Убрать колонку</span></button><button class="rb-btn" id="rbCU" title="Вернуть колонки в обычный текст"><span class="rb-ic"><svg class="qi"><use href="#qi-uncol"/></svg></span><span class="rb-tx">Разобрать</span></button></div></div></div><div class="rb-pane" data-pane="view"><div class="rb-group"><div class="rb-row"><button class="rb-btn" id="rbSide" title="Меню"><span class="rb-ic"><svg class="qi"><use href="#qi-panel"/></svg></span><span class="rb-tx">Меню</span></button><button class="rb-btn" id="rbBack" title="Обратные ссылки"><span class="rb-ic"><svg class="qi"><use href="#qi-link"/></svg></span><span class="rb-tx">Обратные ссылки</span></button><button class="rb-btn" id="rbHome" title="Главная"><span class="rb-ic"><svg class="qi"><use href="#qi-home"/></svg></span><span class="rb-tx">Главная</span></button></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn" id="rbFull" title="Во весь экран"><span class="rb-ic">⛶</span><span class="rb-tx">Во весь экран</span></button><button class="rb-btn" id="rbWinV" title="Скрыть окна"><span class="rb-ic"><svg class="qi"><use href="#qi-win"/></svg></span><span class="rb-tx">Скрыть окна</span></button><button class="rb-btn" id="rbDrawV" title="Скрыть рисунок"><span class="rb-ic"><svg class="qi"><use href="#qi-pen"/></svg></span><span class="rb-tx">Скрыть рисунок</span></button></div></div></div><div class="rb-pane" data-pane="draw"><div class="rb-group"><div class="rb-row"><button class="rb-btn io" data-dt="select" title="Выбор"><span class="rb-ic"><svg class="qi"><use href="#qi-select"/></svg></span><span class="rb-tx">Выбор</span></button><button class="rb-btn io" data-dt="pen" title="Перо"><span class="rb-ic"><svg class="qi"><use href="#qi-pen"/></svg></span><span class="rb-tx">Перо</span></button><button class="rb-btn io" data-dt="line" title="Линия"><span class="rb-ic"><svg class="qi"><use href="#qi-line"/></svg></span><span class="rb-tx">Линия</span></button><button class="rb-btn io" data-dt="arrow" title="Стрелка"><span class="rb-ic"><svg class="qi"><use href="#qi-arrow"/></svg></span><span class="rb-tx">Стрелка</span></button><button class="rb-btn io" data-dt="rect" title="Рамка"><span class="rb-ic"><svg class="qi"><use href="#qi-rect"/></svg></span><span class="rb-tx">Рамка</span></button><button class="rb-btn io" data-dt="ellipse" title="Эллипс"><span class="rb-ic"><svg class="qi"><use href="#qi-ellipse"/></svg></span><span class="rb-tx">Эллипс</span></button><button class="rb-btn io" data-dt="label" title="Надпись"><span class="rb-ic"><svg class="qi"><use href="#qi-type"/></svg></span><span class="rb-tx">Надпись</span></button><button class="rb-btn io" data-dt="erase" title="Ластик"><span class="rb-ic"><svg class="qi"><use href="#qi-eraser"/></svg></span><span class="rb-tx">Ластик</span></button><button class="rb-btn" data-dt="off" title="Текст"><span class="rb-ic"><svg class="qi"><use href="#qi-cursor"/></svg></span><span class="rb-tx">Текст</span></button></div></div><div class="rb-group"><div class="rb-row"><label class="rb-field" title="Цвет"><input type="color" id="dColor" value="#6d28d9"></label><label class="rb-field" title="Толщина"><select id="dWidth" class="rb-sel"><option value="1">1 px</option><option value="2" selected>2 px</option><option value="4">4 px</option><option value="8">8 px</option></select></label><label class="rb-btn rb-chk" title="Заливка"><input type="checkbox" id="dFill"><span class="rb-tx">Заливка</span></label></div></div><div class="rb-group"><div class="rb-row"><button class="rb-btn io" data-da="undo" title="Отменить"><span class="rb-ic"><svg class="qi"><use href="#qi-undo"/></svg></span><span class="rb-tx">Отменить</span></button><button class="rb-btn io" data-da="del" title="Удалить"><span class="rb-ic"><svg class="qi"><use href="#qi-trash"/></svg></span><span class="rb-tx">Удалить</span></button><button class="rb-btn io" data-da="clear" title="Очистить всё"><span class="rb-ic"><svg class="qi"><use href="#qi-clear"/></svg></span><span class="rb-tx">Очистить всё</span></button></div></div></div><div class="rb-pane" data-pane="schema"><div class="rb-group"><div class="rb-row"><button class="rb-btn" id="rbWin" title="Окно схемы"><span class="rb-ic"><svg class="qi"><use href="#qi-net"/></svg></span><span class="rb-tx">Окно схемы</span></button><button class="rb-btn" id="rbPgWin" title="Страница в окне"><span class="rb-ic"><svg class="qi"><use href="#qi-file"/></svg></span><span class="rb-tx">Страница в окне</span></button><button class="rb-btn" id="rbWinToggle" title="Скрыть окна"><span class="rb-ic"><svg class="qi"><use href="#qi-eye"/></svg></span><span class="rb-tx">Скрыть окна</span></button></div></div></div></div><div class="rb-menu" id="mnFC"><div class="sw-grid"><button class="sw" data-fcc="#1f2937" style="background:#1f2937" title="#1f2937"></button><button class="sw" data-fcc="#6b7280" style="background:#6b7280" title="#6b7280"></button><button class="sw" data-fcc="#dc2626" style="background:#dc2626" title="#dc2626"></button><button class="sw" data-fcc="#ea580c" style="background:#ea580c" title="#ea580c"></button><button class="sw" data-fcc="#ca8a04" style="background:#ca8a04" title="#ca8a04"></button><button class="sw" data-fcc="#16a34a" style="background:#16a34a" title="#16a34a"></button><button class="sw" data-fcc="#0d9488" style="background:#0d9488" title="#0d9488"></button><button class="sw" data-fcc="#0284c7" style="background:#0284c7" title="#0284c7"></button><button class="sw" data-fcc="#2563eb" style="background:#2563eb" title="#2563eb"></button><button class="sw" data-fcc="#7c3aed" style="background:#7c3aed" title="#7c3aed"></button><button class="sw" data-fcc="#c026d3" style="background:#c026d3" title="#c026d3"></button><button class="sw" data-fcc="#db2777" style="background:#db2777" title="#db2777"></button></div><button class="mi" data-fc="">⌀ Без цвета</button></div><div class="rb-menu" id="mnBG"><div class="sw-grid"><button class="sw" data-bg="#fff176" style="background:#fff176" title="#fff176"></button><button class="sw" data-bg="#ffe0b2" style="background:#ffe0b2" title="#ffe0b2"></button><button class="sw" data-bg="#ffccbc" style="background:#ffccbc" title="#ffccbc"></button><button class="sw" data-bg="#f8bbd0" style="background:#f8bbd0" title="#f8bbd0"></button><button class="sw" data-bg="#e1bee7" style="background:#e1bee7" title="#e1bee7"></button><button class="sw" data-bg="#d1c4e9" style="background:#d1c4e9" title="#d1c4e9"></button><button class="sw" data-bg="#c5cae9" style="background:#c5cae9" title="#c5cae9"></button><button class="sw" data-bg="#bbdefb" style="background:#bbdefb" title="#bbdefb"></button><button class="sw" data-bg="#b2ebf2" style="background:#b2ebf2" title="#b2ebf2"></button><button class="sw" data-bg="#b2dfdb" style="background:#b2dfdb" title="#b2dfdb"></button><button class="sw" data-bg="#c8e6c9" style="background:#c8e6c9" title="#c8e6c9"></button><button class="sw" data-bg="#dcedc8" style="background:#dcedc8" title="#dcedc8"></button></div><button class="mi" data-bg="">⌀ Без маркера</button></div><div class="rb-menu st" id="mnST"><button class="mi" data-fmt="h1"><span style="font-size:20px;font-weight:700">Заголовок 1</span></button><button class="mi" data-fmt="h2"><span style="font-size:17px;font-weight:700">Заголовок 2</span></button><button class="mi" data-fmt="h3"><span style="font-size:15px;font-weight:700">Заголовок 3</span></button></div></div>
           <div id="tblTools" class="items-center gap-1 px-3 py-1 border-b border-t-c surface2 text-sm" style="display:none">
             <span class="text-muted text-xs">Таблица:</span>
             <button class="icon-btn" data-tbl="addRow">＋ Строка</button>
@@ -775,7 +775,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       </div>
       <button id="btnResetAll" class="text-sm text-red-500 border border-red-400 rounded-lg px-3 py-1">⚠ Сбросить всю базу данных</button>
       <div class="text-sm font-semibold">📦 Полная копия (.quartz)</div><div class="flex gap-2 flex-wrap"><button id="btnQzExp" class="text-sm border border-t-c rounded-lg px-3 py-1">Сохранить копию</button><button id="btnQzExpEnc" class="text-sm border border-t-c rounded-lg px-3 py-1">🔐 Зашифрованная</button><button id="btnQzImp" class="text-sm border border-t-c rounded-lg px-3 py-1">♻ Восстановить…</button></div><div class="text-muted text-xs">База, настройки, картинки, рисунки, история и проверка целостности. Экспорт ZIP и JSON картинок не содержит.</div>
-      <details class="text-sm border border-t-c rounded-lg p-3"><summary class="cursor-pointer font-semibold">📖 Инструкция</summary><div class="mt-2 space-y-3"><div><b>Быстрый старт</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>Главная (🏠 или значок Quartz) показывает книги. «＋ Книга» и «＋ Страница» создают объект сразу, с именем по дате и времени — переименуйте в заголовке страницы или кнопкой ✏️ у книги.</li><li>Всё хранится в браузере на этом устройстве. Для резервной копии используйте экспорт или зашифрованную копию (Ctrl+K), для обмена между устройствами — синхронизацию.</li><li>Файл работает полностью без интернета. Сеть нужна только если вы включили синхронизацию. Результат действий показывается всплывающими сообщениями внизу экрана (синхронизация, перемещение, копии, избранное и другие), подробный журнал синхронизации — Ctrl+K → «Журнал синхронизации». На главной кнопка «🔄 Синхронизировать всё» запускает синхронизацию всех настроенных профилей. Кнопка ⛶ (в шапке и на вкладке «Вид») включает полноэкранный режим, выход — Esc или та же кнопка; если браузер его не поддерживает (например, iPhone), включается режим фокуса без меню и ленты.</li></ul></div><div><b>Книги и страницы</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>Стрелка ▾/▸ у книги или страницы сворачивает список. Кнопки ➕ ✏️ 🗑️ и другие появляются при наведении (на телефоне видны всегда).</li><li>↕ — меню перемещения: «Выше» и «Ниже», у страницы «Переместить в книгу…» (с вложенными страницами), у книги «Объединить с книгой…» (страницы переезжают, пустая книга удаляется). У страницы также «Сделать вложенной в страницу…» (в любую страницу любой книги) и «Вынести на уровень книги»; вложить можно и перетаскиванием: бросьте страницу на другую страницу.</li><li>Книги переставляют перетаскиванием заголовка (книга встаёт перед той, на которую её бросили), страницу переносят, бросив её на заголовок другой книги. На телефоне удерживайте элемент около полсекунды и тяните; так же работают карточки книг на главной.</li><li>Перемещение и объединение с книгами или страницами под паролем не поддерживаются: сначала снимите защиту.</li><li>Левую панель можно расширять и сужать: потяните её правый край мышью или пальцем. Ширина запоминается.</li></ul></div><div><b>Главная: закрепление, избранное, цвет</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>Плитка или список — переключатель справа вверху. Клик по книге показывает её страницы.</li><li>📍 закрепляет книгу (она встаёт в раздел «Закреплённые»), ⠿ — перетащите значок мышью или пальцем, чтобы изменить порядок книг, 🎨 — выбрать цвет книги.</li><li>☆ на карточке страницы или кнопка «Избранное» на ленте добавляют страницу в раздел «⭐ Избранное».</li><li>Закрепления, избранное, цвета и порядок на главной хранятся только на этом устройстве.</li></ul></div><div><b>Текст</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>Редактор работает «как написано»: форматирование видно сразу, Markdown используется только для хранения.</li><li>Сокращения: «# », «## », «### » — заголовки; «- » или «* » — список; «1. » — нумерованный; «&gt; » — цитата; «[] » — задача; «---» и Enter — разделитель. Вставленный текст с Markdown преобразуется в форматирование.</li><li>Ctrl/⌘+B и Ctrl/⌘+I — жирный и курсив. Лента: вкладки «Главная» (шрифт, стили, списки, тег, избранное, пароль), «Вставка», «Вид», «Рисование», «Схема». Стрелка ⌃ сворачивает ленту, полностью скрыть её можно в настройках.</li><li>Тег: кнопка 🏷. Клик по тегу в облаке слева показывает все страницы с ним.</li><li>Задачи: клик по чекбоксу отмечает пункт и зачёркивает строку. Шрифт, размер 9–50, цвет текста и маркер — на вкладке «Главная», группа «Оформление»: выделите текст и выберите параметр; «Сброс» убирает оформление. В Markdown оно хранится как [текст]{size=20 color=#dc2626 bg=#fff176 font=georgia}. Если текст не выделен, выбранный параметр применяется к следующим набранным словам (до клика в другое место или перемещения курсора стрелками), в том числе с экранной клавиатуры. Ссылки и код красить нельзя. Выравнивание абзаца (слева, по центру, справа, по ширине) — группа «Выравнивание» на вкладке «Главная»; в Markdown записывается как «{align=center}» в конце абзаца. Размер шрифта кнопками A− и A+ меняется по ступеням (9, 10, 11, 12, 14, 16, 18, 20, 22, 24, 28, 32, 36, 40, 44, 50), точное значение вводится в поле. Всё это работает и внутри колонок.</li><li>Код (моноширинный текст, кнопка «Код») копируется нажатием, как в Telegram: в окнах, сносках и корзине — одним нажатием, в редакторе — двойным. Появится «Скопировано».</li><li>Скрытый текст: выделите слова и нажмите «Скрыть» на вкладке «Главная». Текст размывается, нажатие показывает его. Повторное «Скрыть» внутри скрытого текста снимает скрытие. В Markdown хранится как ||текст||.</li><li>Перетаскивание текста из другой программы в Quartz копирует его: в исходной программе текст остаётся.</li></ul></div><div><b>Колонки</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>«Вставка» → «2 колонки» или «3 колонки». Каждая колонка — отдельное текстовое поле с едва заметной рамкой. Готовый текст можно переложить в колонки: выделите несколько абзацев (или список, таблицу), нажмите «2 колонки» или «3 колонки» и выберите, как разложить: поровну по порядку или всё в первую колонку. Переносятся целые блоки, которых коснулось выделение. «Разобрать» возвращает колонки в обычный текст без потери содержимого.</li><li>Ширина каждой колонки меняется независимо от остальных: потяните правый край колонки (узкая полоска у её правой границы, на телефоне шире) мышью или пальцем. Если колонки шире страницы, появляется горизонтальная прокрутка. Двойной клик по правому краю колонки выравнивает все колонки поровну.</li><li>«＋ Колонка» и «− Колонка» добавляют и убирают колонку, где стоит курсор. Ширины хранятся на странице. Когда курсор в колонке, под лентой появляется панель «Колонка»: в части «Текст» кнопки ⬆ ⬇ ⬅ ➡ перемещают абзац (или несколько выделенных абзацев) вверх, вниз или в соседнюю колонку на то же место; в части «Колонку» кнопки ◀ ▶ меняют колонку местами с соседней вместе с её шириной.</li></ul></div><div><b>Таблицы</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>«Вставка» → «Таблица». Курсор в ячейке открывает панель: строки и столбцы, выравнивание ⬅ ↔ ➡ (для столбца), «Объед.» вправо или вниз, «Разд.», 6 цветов ячейки и «⌀» без цвета. Tab — следующая ячейка, в последней добавляет строку.</li><li>Простая таблица остаётся обычным Markdown. С объединением или цветом таблица сохраняется как HTML-блок внутри Markdown: в Quartz он работает, в других программах может выглядеть иначе.</li></ul></div><div><b>Ссылки, обратные ссылки, граф</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>«Вставка» → «Страница» вставляет ссылку [[…]] на другую страницу, «Ссылка» — обычный адрес. Если в разных книгах есть страницы с одинаковым названием, ссылка записывается как [[Книга/Страница]] (без указания книги берётся страница из текущей книги). Ссылка на заголовок: [[Страница#Заголовок]]. Ctrl+K → «Отчёт о ссылках» показывает битые и неоднозначные. Переименование страницы обновляет ссылки на неё.</li><li>Панель «Обратные» (вкладка «Вид») показывает страницы, ссылающиеся на текущую. Появится, когда на эту страницу кто-то сошлётся.</li><li>Граф связей (Ctrl+K → «Граф связей»): сплошная линия — ссылка, пунктир — общий тег. Кружки можно перетаскивать, клик по кружку даёт цвет и кнопку «Открыть». Положения и цвета хранятся на этом устройстве.</li></ul></div><div><b>Картинки</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>«Вставка» → «Картинка», вставка из буфера или перетаскивание файла. Клик по картинке показывает синюю точку — тяните её, чтобы изменить размер.</li><li>Изображения сжимаются до 1600 px и хранятся в IndexedDB. При синхронизации через GitHub картинки отправляются в папку att/ вашего репозитория (для зашифрованных книг — в зашифрованном виде). Для «своего сервера» картинки не синхронизируются.</li></ul></div><div><b>Рисование и схемы</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>Вкладка «Рисование» — слой поверх страницы: перо, линия, стрелка, рамка, эллипс, надпись, ластик, выбор. Пока инструмент включён, касание рисует, «✋ Текст» возвращает набор текста. Фигуры рисунка можно править и без выбора инструмента: клик по фигуре выделяет её, затем её можно перетаскивать, тянуть за кружки на концах, менять цвет и удалять на мини-панели над фигурой, а по надписи двойной клик меняет текст. Клик по свободному месту или Esc возвращает работу с текстом.</li><li>Вкладка «Схема» → «Окно схемы» — перемещаемое окно в рамке: тяните за заголовок, размер меняет угол, — сворачивает, ✕ удаляет. Внутри готовые фигуры (блок, сервис, сервер, БД, облако, пользователь, очередь, API), 🔗 умные связи (стрелки следуют за фигурами), 🖊 перо, 🖼 картинки, ✎ подпись, 🗑 удаление, выбор цвета.</li><li>«Страница в окне» показывает другую страницу: ссылки [[…]] внутри окна открывают переход в том же окне (← назад, ↗ в основное окно). Страницу можно редактировать прямо в окне, если она не открыта в основном. Защищённые паролем страницы в окне только блокируются.</li><li>«Вид» → «Скрыть окна» и «Скрыть рисунок» временно прячут все окна схем и страниц или слой рисунка. Данные не удаляются.</li></ul></div><div><b>Поиск</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>Строка поиска в шапке и Ctrl+K открывают общий поиск по всем книгам: названия книг и страниц, теги, текст, подписи фигур и связей в схемах, надписи рисунка, несколько слов сразу. Найденные слова подсвечены, а открытая страница прокручивается к первому совпадению.</li><li>В этой же палитре — команды: граф, история версий, корзина, обратные ссылки, импорт папки Markdown, зашифрованная копия, профили синхронизации, блокировка защищённых страниц.</li></ul></div><div><b>Синхронизация</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>«Основная»: Настройки → Синхронизация (GitHub или свой сервер). Режим «авто» синхронизирует каждые 5 минут, ручные кнопки отправляют и получают. Страницы сливаются по времени последней правки; если страница была изменена и здесь, и на другом устройстве, сохраняются обе версии (копия получает пометку «конфликт»). Переименование книг тоже синхронизируется. Все операции записываются в журнал: Ctrl+K → «Журнал синхронизации».</li><li>«Профили»: дополнительные подключения со своим токеном, репозиторием и способом. Кнопка 🔑 у книги или страницы назначает профиль, 🔄 синхронизирует профиль вручную (весь файл профиля, чтобы не потерять чужие страницы).</li><li>Токен храните только в доверенном браузере. Рекомендуется fine-grained токен на один репозиторий с правом Contents.</li></ul></div><div><b>Пароли и шифрование</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>🔒 у книги или страницы: защитить паролем, заблокировать сейчас, снять пароль. Пароль страницы шифрует её содержимое, пароль книги шифрует все её страницы (запрос при открытии) либо только данные при синхронизации.</li><li>Если в книге есть защищённая страница, вся книга шифруется при синхронизации, на другом устройстве нужен пароль книги.</li><li>Пароль восстановить невозможно. Заголовки и теги остаются видимыми. Экспорт открытой защищённой страницы содержит обычный текст.</li></ul></div><div><b>Резервные копии, импорт, настройки</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>Рекомендуемый способ копирования — «📦 Полная копия (.quartz)» в настройках: в файл входят база, настройки, картинки, рисунки и схемы, история версий и манифест с проверкой целостности. При восстановлении показывается, что будет заменено, и можно выбрать «Заменить всю базу» или «Объединить». Есть зашифрованный вариант (пароль не восстанавливается). Остальное: экспорт .json, .zip, .md (картинок в них нет), импорт .md или .zip (создаётся новая книга), импорт JSON базы. Ctrl+K → «Хранилище» показывает занятое место; при заполнении около 60% приложение предупредит.</li><li>Темы: готовые и свои, сохранённые темы можно удалить (🗑). Режим E-Ink для экранов электронных чернил. Мобильная версия включается автоматически на узких экранах.</li><li>Корзина хранит до 40 удалённых страниц, история — до 10 версий каждой страницы (раз в 10 минут).</li></ul></div></div></details>
+      <details class="text-sm border border-t-c rounded-lg p-3"><summary class="cursor-pointer font-semibold">📖 Инструкция</summary><div class="mt-2 space-y-3"><div><b>Быстрый старт</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>Главная (🏠 или значок Quartz) показывает книги. «＋ Книга» и «＋ Страница» создают объект сразу, с именем по дате и времени — переименуйте в заголовке страницы или кнопкой ✏️ у книги.</li><li>Всё хранится в браузере на этом устройстве. Для резервной копии используйте экспорт или зашифрованную копию (Ctrl+K), для обмена между устройствами — синхронизацию.</li><li>Файл работает полностью без интернета. Сеть нужна только если вы включили синхронизацию. Результат действий показывается всплывающими сообщениями внизу экрана (синхронизация, перемещение, копии, избранное и другие), подробный журнал синхронизации — Ctrl+K → «Журнал синхронизации». На главной кнопка «🔄 Синхронизировать всё» запускает синхронизацию всех настроенных профилей. Кнопка ⛶ (в шапке и на вкладке «Вид») включает полноэкранный режим, выход — Esc или та же кнопка; если браузер его не поддерживает (например, iPhone), включается режим фокуса без меню и ленты.</li></ul></div><div><b>Книги и страницы</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>Стрелка ▾/▸ у книги или страницы сворачивает список. Кнопки ➕ ✏️ 🗑️ и другие появляются при наведении (на телефоне видны всегда).</li><li>↕ — меню перемещения: «Выше» и «Ниже», у страницы «Переместить в книгу…» (с вложенными страницами), у книги «Объединить с книгой…» (страницы переезжают, пустая книга удаляется). У страницы также «Сделать вложенной в страницу…» (в любую страницу любой книги) и «Вынести на уровень книги»; вложить можно и перетаскиванием: бросьте страницу на другую страницу.</li><li>Книги переставляют перетаскиванием заголовка (книга встаёт перед той, на которую её бросили), страницу переносят, бросив её на заголовок другой книги. На телефоне удерживайте элемент около полсекунды и тяните; так же работают карточки книг на главной.</li><li>Перемещение и объединение с книгами или страницами под паролем не поддерживаются: сначала снимите защиту.</li><li>Левую панель можно расширять и сужать: потяните её правый край мышью или пальцем. Ширина запоминается.</li></ul></div><div><b>Главная: закрепление, избранное, цвет</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>Плитка или список — переключатель справа вверху. Клик по книге показывает её страницы.</li><li>📍 закрепляет книгу (она встаёт в раздел «Закреплённые»), ⠿ — перетащите значок мышью или пальцем, чтобы изменить порядок книг, 🎨 — выбрать цвет книги.</li><li>☆ на карточке страницы или кнопка «Избранное» на ленте добавляют страницу в раздел «⭐ Избранное».</li><li>Закрепления, избранное, цвета и порядок на главной хранятся только на этом устройстве.</li></ul></div><div><b>Текст</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>Редактор работает «как написано»: форматирование видно сразу, Markdown используется только для хранения.</li><li>Сокращения: «# », «## », «### » — заголовки; «- » или «* » — список; «1. » — нумерованный; «&gt; » — цитата; «[] » — задача; «---» и Enter — разделитель. Вставленный текст с Markdown преобразуется в форматирование.</li><li>Ctrl/⌘+B и Ctrl/⌘+I — жирный и курсив (полный список сочетаний — в разделе «Сочетания клавиш» ниже). Лента: вкладки «Главная» (шрифт, стили, списки, тег, избранное, пароль), «Вставка», «Вид», «Рисование», «Схема». Стрелка ⌃ сворачивает ленту, полностью скрыть её можно в настройках.</li><li>Тег: кнопка 🏷. Клик по тегу в облаке слева показывает все страницы с ним.</li><li>Задачи: клик по чекбоксу отмечает пункт и зачёркивает строку. Шрифт, размер 9–50, цвет текста и маркер — на вкладке «Главная», группа «Оформление»: выделите текст и выберите параметр; «Сброс» убирает оформление. В Markdown оно хранится как [текст]{size=20 color=#dc2626 bg=#fff176 font=georgia}. Если текст не выделен, выбранный параметр применяется к следующим набранным словам (до клика в другое место или перемещения курсора стрелками), в том числе с экранной клавиатуры. Ссылки и код красить нельзя. Выравнивание абзаца (слева, по центру, справа, по ширине) — группа «Выравнивание» на вкладке «Главная»; в Markdown записывается как «{align=center}» в конце абзаца. Размер шрифта кнопками A− и A+ меняется по ступеням (9, 10, 11, 12, 14, 16, 18, 20, 22, 24, 28, 32, 36, 40, 44, 50), точное значение вводится в поле. Всё это работает и внутри колонок.</li><li>Код (моноширинный текст, кнопка «Код») копируется нажатием, как в Telegram: в окнах, сносках и корзине — одним нажатием, в редакторе — двойным. Появится «Скопировано».</li><li>Скрытый текст: выделите слова и нажмите «Скрыть» на вкладке «Главная». Текст размывается, нажатие показывает его. Повторное «Скрыть» внутри скрытого текста снимает скрытие. В Markdown хранится как ||текст||.</li><li>Перетаскивание текста из другой программы в Quartz копирует его: в исходной программе текст остаётся.</li></ul></div><div><b>Отступы абзацев</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>«⇥ Отступ» и «⇤ Убрать отступ» на вкладке «Главная» (рядом с выравниванием) сдвигают абзац вправо или влево уровнями от 1 до 8 — так оформляется вложенный, второстепенный абзац: он сдвинут, слегка приглушён и отмечен тонкой линией слева.</li><li>Клавиши: Tab — на уровень правее, Shift+Tab — левее. Работает в обычных абзацах, заголовках и цитатах; в списках, таблицах (там Tab переходит по ячейкам) и коде Tab ведёт себя как раньше. Можно выделить несколько абзацев сразу.</li><li>«¶ Красная строка» включает и выключает отступ первой строки абзаца.</li><li>Всё это работает и внутри колонок, сочетается с выравниванием. В Markdown хранится в конце абзаца: «{indent=2}» и «{first=1}», например «Текст {indent=1} {first=1} {align=justify}».</li></ul></div><div><b>Ссылки: изменить и убрать</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>Нажмите на любую ссылку в тексте (внешнюю, на страницу [[…]], на абзац) или на кнопку — появится маленькая панель: «Открыть» (у копирования — «Копировать»), «Изменить» и «Убрать ссылку». «Убрать» оставляет текст, убирает только ссылку. Ctrl/⌘+клик открывает ссылку сразу.</li><li>На вкладке «Вставка» есть кнопка «Убрать ссылку» — она срабатывает, когда курсор стоит на ссылке. Если открыть «Ссылка» или нажать Ctrl/⌘+Shift+K, стоя на ссылке, откроется её редактирование — там же есть «Убрать ссылку».</li></ul></div><div><b>Кнопки как в Telegram</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>«Вставка» → «Кнопка». Ссылка и кнопка — один и тот же диалог: текст, куда ведёт и вид «Текстом» или «Кнопкой». У кнопки выбирается цвет: серая, голубая, зелёная или красная.</li><li>Куда ведёт: «Внешняя» — адрес сайта; «Внутренняя» — страница Quartz или отмеченные абзацы (упоминание: нажатие открывает страницу и подсвечивает абзац); «Копирование» — текст, который копируется по нажатию (появится «Скопировано»).</li><li>Несколько кнопок подряд в отдельном абзаце становятся рядом и делят ширину; одна кнопка в абзаце занимает всю ширину, как в Telegram. Кнопку внутри текста можно поставить и между словами.</li><li>Изменить кнопку: нажмите на неё → «Изменить», либо правый клик или долгое нажатие на телефоне. В диалоге можно переключить вид «Текстом / Кнопкой» туда и обратно — адрес не теряется. Кнопка «Убрать ссылку» превращает кнопку в обычный текст.</li><li>В Markdown: «[Текст](https://адрес){btn=blue}», «[[Страница#^abc123|Текст]]{btn=green}», «[Текст]{copy="что копировать" btn=gray}»; без «btn=…» это обычные ссылки. Кавычки и обратная косая черта в тексте экранируются «\» — всё переживает синхронизацию.</li></ul></div><div><b>Сочетания клавиш</b><div class="mt-1">На Mac вместо Ctrl используется ⌘. Сочетания показаны и в подсказках кнопок ленты.</div><div id="qxKeys"></div></div><div><b>Колонки</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>«Вставка» → «2 колонки» или «3 колонки». Каждая колонка — отдельное текстовое поле с едва заметной рамкой. Готовый текст можно переложить в колонки: выделите несколько абзацев (или список, таблицу), нажмите «2 колонки» или «3 колонки» и выберите, как разложить: поровну по порядку или всё в первую колонку. Переносятся целые блоки, которых коснулось выделение. «Разобрать» возвращает колонки в обычный текст без потери содержимого.</li><li>Ширина каждой колонки меняется независимо от остальных: потяните правый край колонки (узкая полоска у её правой границы, на телефоне шире) мышью или пальцем. Если колонки шире страницы, появляется горизонтальная прокрутка. Двойной клик по правому краю колонки выравнивает все колонки поровну.</li><li>«＋ Колонка» и «− Колонка» добавляют и убирают колонку, где стоит курсор. Ширины хранятся на странице. Когда курсор в колонке, под лентой появляется панель «Колонка»: в части «Текст» кнопки ⬆ ⬇ ⬅ ➡ перемещают абзац (или несколько выделенных абзацев) вверх, вниз или в соседнюю колонку на то же место; в части «Колонку» кнопки ◀ ▶ меняют колонку местами с соседней вместе с её шириной.</li></ul></div><div><b>Таблицы</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>«Вставка» → «Таблица». Курсор в ячейке открывает панель: строки и столбцы, выравнивание ⬅ ↔ ➡ (для столбца), «Объед.» вправо или вниз, «Разд.», 6 цветов ячейки и «⌀» без цвета. Tab — следующая ячейка, в последней добавляет строку.</li><li>Простая таблица остаётся обычным Markdown. С объединением или цветом таблица сохраняется как HTML-блок внутри Markdown: в Quartz он работает, в других программах может выглядеть иначе.</li></ul></div><div><b>Ссылки, обратные ссылки, граф</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>«Вставка» → «Страница» вставляет ссылку [[…]] на другую страницу, «Ссылка» — обычный адрес. Если в разных книгах есть страницы с одинаковым названием, ссылка записывается как [[Книга/Страница]] (без указания книги берётся страница из текущей книги). Ссылка на заголовок: [[Страница#Заголовок]]. Ctrl+K → «Отчёт о ссылках» показывает битые и неоднозначные. Переименование страницы обновляет ссылки на неё.</li><li>Панель «Обратные» (вкладка «Вид») показывает страницы, ссылающиеся на текущую. Появится, когда на эту страницу кто-то сошлётся.</li><li>Граф связей (Ctrl+K → «Граф связей»): сплошная линия — ссылка, пунктир — общий тег. Кружки можно перетаскивать, клик по кружку даёт цвет и кнопку «Открыть». Положения и цвета хранятся на этом устройстве.</li></ul></div><div><b>Картинки</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>«Вставка» → «Картинка», вставка из буфера или перетаскивание файла. Клик по картинке показывает синюю точку — тяните её, чтобы изменить размер.</li><li>Изображения сжимаются до 1600 px и хранятся в IndexedDB. При синхронизации через GitHub картинки отправляются в папку att/ вашего репозитория (для зашифрованных книг — в зашифрованном виде). Для «своего сервера» картинки не синхронизируются.</li></ul></div><div><b>Рисование и схемы</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>Вкладка «Рисование» — слой поверх страницы: перо, линия, стрелка, рамка, эллипс, надпись, ластик, выбор. Пока инструмент включён, касание рисует, «✋ Текст» возвращает набор текста. Фигуры рисунка можно править и без выбора инструмента: клик по фигуре выделяет её, затем её можно перетаскивать, тянуть за кружки на концах, менять цвет и удалять на мини-панели над фигурой, а по надписи двойной клик меняет текст. Клик по свободному месту или Esc возвращает работу с текстом.</li><li>Вкладка «Схема» → «Окно схемы» — перемещаемое окно в рамке: тяните за заголовок, размер меняет угол, — сворачивает, ✕ удаляет. Внутри готовые фигуры (блок, сервис, сервер, БД, облако, пользователь, очередь, API), 🔗 умные связи (стрелки следуют за фигурами), 🖊 перо, 🖼 картинки, ✎ подпись, 🗑 удаление, выбор цвета.</li><li>«Страница в окне» показывает другую страницу: ссылки [[…]] внутри окна открывают переход в том же окне (← назад, ↗ в основное окно). Страницу можно редактировать прямо в окне, если она не открыта в основном. Защищённые паролем страницы в окне только блокируются.</li><li>«Вид» → «Скрыть окна» и «Скрыть рисунок» временно прячут все окна схем и страниц или слой рисунка. Данные не удаляются.</li></ul></div><div><b>Поиск</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>Строка поиска в шапке и Ctrl+K открывают общий поиск по всем книгам: названия книг и страниц, теги, текст, подписи фигур и связей в схемах, надписи рисунка, несколько слов сразу. Найденные слова подсвечены, а открытая страница прокручивается к первому совпадению.</li><li>В этой же палитре — команды: граф, история версий, корзина, обратные ссылки, импорт папки Markdown, зашифрованная копия, профили синхронизации, блокировка защищённых страниц.</li></ul></div><div><b>Синхронизация</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>«Основная»: Настройки → Синхронизация (GitHub или свой сервер). Режим «авто» синхронизирует каждые 5 минут, ручные кнопки отправляют и получают. Страницы сливаются по времени последней правки; если страница была изменена и здесь, и на другом устройстве, сохраняются обе версии (копия получает пометку «конфликт»). Переименование книг тоже синхронизируется. Все операции записываются в журнал: Ctrl+K → «Журнал синхронизации».</li><li>«Профили»: дополнительные подключения со своим токеном, репозиторием и способом. Кнопка 🔑 у книги или страницы назначает профиль, 🔄 синхронизирует профиль вручную (весь файл профиля, чтобы не потерять чужие страницы).</li><li>Токен храните только в доверенном браузере. Рекомендуется fine-grained токен на один репозиторий с правом Contents.</li></ul></div><div><b>Пароли и шифрование</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>🔒 у книги или страницы: защитить паролем, заблокировать сейчас, снять пароль. Пароль страницы шифрует её содержимое, пароль книги шифрует все её страницы (запрос при открытии) либо только данные при синхронизации.</li><li>Если в книге есть защищённая страница, вся книга шифруется при синхронизации, на другом устройстве нужен пароль книги.</li><li>Пароль восстановить невозможно. Заголовки и теги остаются видимыми. Экспорт открытой защищённой страницы содержит обычный текст.</li></ul></div><div><b>Резервные копии, импорт, настройки</b><ul class="list-disc pl-5 space-y-1 mt-1"><li>Рекомендуемый способ копирования — «📦 Полная копия (.quartz)» в настройках: в файл входят база, настройки, картинки, рисунки и схемы, история версий и манифест с проверкой целостности. При восстановлении показывается, что будет заменено, и можно выбрать «Заменить всю базу» или «Объединить». Есть зашифрованный вариант (пароль не восстанавливается). Остальное: экспорт .json, .zip, .md (картинок в них нет), импорт .md или .zip (создаётся новая книга), импорт JSON базы. Ctrl+K → «Хранилище» показывает занятое место; при заполнении около 60% приложение предупредит.</li><li>Темы: готовые и свои, сохранённые темы можно удалить (🗑). Режим E-Ink для экранов электронных чернил. Мобильная версия включается автоматически на узких экранах.</li><li>Корзина хранит до 40 удалённых страниц, история — до 10 версий каждой страницы (раз в 10 минут).</li></ul></div></div></details>
     </div>
   </div>
 </div>
@@ -784,13 +784,17 @@ https://github.com/nodeca/pako/blob/main/LICENSE
 <div id="linkPickerModal" class="modal-overlay hidden">
   <div class="modal-box max-w-md">
     <div class="flex justify-between items-center mb-3">
-      <h2 class="text-lg font-bold">🔗 Вставить ссылку</h2>
+      <h2 class="text-lg font-bold" id="lp-title">🔗 Вставить ссылку</h2>
       <button class="icon-btn" id="closeLinkPicker">✕</button>
     </div>
     <div class="flex gap-1 mb-3">
       <button class="seg-btn active surface2" id="lp-tab-internal">Внутренняя</button>
       <button class="seg-btn surface2" id="lp-tab-external">Внешняя</button>
+      <button class="seg-btn surface2" id="lp-tab-copy">Копирование</button>
     </div>
+    <div id="lp-view"><span class="lp-k">Вид:</span><button class="seg-btn surface2 active" data-v="text">Текстом</button><button class="seg-btn surface2" data-v="btn">Кнопкой</button></div>
+    <div id="lp-colors" class="hidden"><button data-c="gray"><i style="background:#9ca3af"></i>Серая</button><button data-c="blue"><i style="background:#3390ec"></i>Голубая</button><button data-c="green"><i style="background:#2fa84f"></i>Зелёная</button><button data-c="red"><i style="background:#e5484d"></i>Красная</button></div>
+    <div id="lp-prev" class="hidden"></div>
     <div id="lp-internal">
       <input id="lp-search" placeholder="Поиск страницы…" class="w-full surface2 border border-t-c rounded-lg px-2 py-1 text-sm mb-2">
       <div id="lp-pages" class="max-h-40 overflow-auto space-y-1 mb-2 text-sm"></div>
@@ -805,6 +809,12 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       <input id="lp-ext-label" placeholder="Текст ссылки" class="w-full surface2 border border-t-c rounded-lg px-2 py-1 text-sm">
       <button id="lp-ext-insert" class="accent-bg rounded-lg px-3 py-1.5 text-sm w-full">Вставить</button>
     </div>
+    <div id="lp-copy" class="hidden space-y-2">
+      <textarea id="lp-copy-text" placeholder="Текст, который скопируется по нажатию" class="w-full surface2 border border-t-c rounded-lg px-2 py-1 text-sm"></textarea>
+      <input id="lp-copy-label" placeholder="Текст ссылки" class="w-full surface2 border border-t-c rounded-lg px-2 py-1 text-sm">
+      <button id="lp-copy-insert" class="accent-bg rounded-lg px-3 py-1.5 text-sm w-full">Вставить</button>
+    </div>
+    <button id="lp-unlink" class="hidden">⛓ Убрать ссылку (текст останется)</button>
   </div>
 </div>
 
@@ -1366,15 +1376,16 @@ function mdToHtmlBase0(src){
 function inlineMdBase(text){
   let t = escapeHtml(text);
   t = t.replace(/^\[( |x|X)\] /,(m,c)=>c===' '?'☐ ':'☑ ');
-  t = t.replace(/\[\[([^\]|#]+)(?:#([^\]|]+))?(?:\|([^\]]+))?\]\]/g, (_,title,block,label)=>{
+  t = t.replace(/\[\[([^\[\]|#]+)(?:#([^\]|]+))?(?:\|([^\]]+))?\]\]/g, (_,title,block,label)=>{
     const target = wikiTarget(title);
     const text = label || title;
     if(target) return `<a class="wikilink" data-link-page="${target.id}" data-link-block="${block||''}" href="#">${text}</a>`;
     return `<a class="wikilink-missing" href="#" data-create-title="${escapeHtml(title)}">${text}</a>`;
   });
   t = t.replace(/!\[([^\]|]*)(?:\|(\d+))?\]\(att:([\w-]+)\)/g,(m,a,w,id)=>`<img data-att="${id}" alt="${a}" ${w?`width="${w}"`:''} style="max-width:100%">`);
-  t = t.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m,a,u)=>{
-    const raw=u.replace(/[\s\u0000-\u001f]/g,'');
+  t = t.replace(/(^|[^!\]])\[([^\[\]]*)\]\(\s*\)/g, '$1$2');
+  t = t.replace(/\[((?:[^\[\]]|\[[^\[\]]*\])+)\]\(([^)]+)\)/g, (m,a,u)=>{
+    if(!u.trim()) return a; const raw=u.replace(/[\s\u0000-\u001f]/g,'');
     const ok=/^(https?:|mailto:)/i.test(raw) || !/^[a-z][a-z0-9+.\-]*:/i.test(raw);
     return ok ? `<a href="${u}" target="_blank" rel="noopener noreferrer">${a}</a>` : m;
   });
@@ -1410,7 +1421,7 @@ function renderBacklinks(){
   Object.values(db.pages).forEach(p=>{
     if(p.id===cur.id) return;
     let text = p.mode==='md' ? (p.markdown||'') : (p.blocks||[]).map(b=> b.type==='table'? b.rows.flat().join(' ') : (b.html||'')).join(' ');
-    const re = /\[\[([^\]|#]+)/g; let m;
+    const re = /\[\[([^\[\]|#]+)/g; let m;
     while(m=re.exec(text)){
       if(m[1].trim().toLowerCase()===cur.title.toLowerCase()){ refs.push(p); break; }
     }
@@ -1531,9 +1542,11 @@ function htmlToMd(html,pages){
       case 'INPUT': return '';
       case 'SPAN': if(n.classList.contains('qspoil')) return c.trim()?'||'+c+'||':c; if(n.classList.contains('qs')){ const d=n.dataset, q=[]; if(d.size) q.push('size='+d.size); if(d.color) q.push('color='+d.color); if(d.bg) q.push('bg='+d.bg); if(d.font) q.push('font='+d.font); return q.length&&c.trim()?'['+c+']{'+q.join(' ')+'}':c; } return c;
       case 'IMG': { const w=parseInt(n.getAttribute('width')||(n.style&&n.style.width)||''); return n.dataset.att?`![${n.alt||''}${w?'|'+w:''}](att:${n.dataset.att})`:''; }
-      case 'A': { const pid=n.dataset.linkPage, ct=n.dataset.createTitle;
-        if((pid&&pages[pid])||ct){ const t=ct||wikiRefIn(pages,pid), b=n.dataset.linkBlock?'#'+n.dataset.linkBlock:''; return '[['+t+b+(c&&c!==t?'|'+c:'')+']]'; }
-        return `[${c}](${n.getAttribute('href')||''})`; }
+      case 'A': { const pid=n.dataset.linkPage, ct=n.dataset.createTitle, sx=(typeof qxAttr==='function')?qxAttr(n):'';
+        if((pid&&pages[pid])||ct){ const t=ct||wikiRefIn(pages,pid), b=n.dataset.linkBlock?'#'+n.dataset.linkBlock:''; return '[['+t+b+(c&&c!==t?'|'+c:'')+']]'+sx; }
+        const hr=(n.getAttribute('href')||'').trim();
+        if(n.classList.contains('qcopy')||(n.classList.contains('qbtn')&&(!hr||hr==='#'))) return c.trim()?'['+c+']'+sx:c;
+        if(!hr||hr==='#') return c; return '['+c+']('+hr+')'+sx; }
       default: return c;
     }
   };
@@ -1978,7 +1991,7 @@ function showGraph(){
   const ps=Object.values(db.pages), idx={}; ps.forEach((x,i)=>idx[x.title.toLowerCase()]=i);
   db.gpos=db.gpos||{}; db.gcol=db.gcol||{};
   const N=ps.map((x,i)=>{ const g=db.gpos[x.id]; return {p:x,x:g?g[0]:300+Math.cos(i)*150,y:g?g[1]:200+Math.sin(i)*150,vx:0,vy:0,fix:!!g}; }), E=[], TE=[], byTag={};
-  ps.forEach((x,i)=>{ const re=/\[\[([^\]|#]+)/g; let m; while(m=re.exec(x.markdown||'')){ const j=idx[m[1].trim().toLowerCase()]; if(j!=null&&j!==i) E.push([i,j]); } (x.tags||[]).forEach(t=>{ const k=String(t).toLowerCase(); (byTag[k]=byTag[k]||[]).push(i); }); });
+  ps.forEach((x,i)=>{ const re=/\[\[([^\[\]|#]+)/g; let m; while(m=re.exec(x.markdown||'')){ const j=idx[m[1].trim().toLowerCase()]; if(j!=null&&j!==i) E.push([i,j]); } (x.tags||[]).forEach(t=>{ const k=String(t).toLowerCase(); (byTag[k]=byTag[k]||[]).push(i); }); });
   Object.values(byTag).forEach(a=>{ if(a.length<2) return; if(a.length<=6){ for(let u=0;u<a.length;u++) for(let v=u+1;v<a.length;v++) TE.push([a[u],a[v]]); } else for(let u=1;u<a.length;u++) TE.push([a[u-1],a[u]]); });
   for(let it=0;it<200;it++){
     N.forEach((a,i)=>{ N.forEach((b,j)=>{ if(i<j){ const dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy)||1,f=2500/(d*d); a.vx+=dx/d*f; a.vy+=dy/d*f; b.vx-=dx/d*f; b.vy-=dy/d*f; } }); a.vx+=(300-a.x)*.01; a.vy+=(200-a.y)*.01; });
@@ -2898,7 +2911,7 @@ function wikiRef(pg){ const dup=Object.values(db.pages).filter(x=>x.title.toLowe
 function wikiRefIn(pages,id){ try{ return wikiRef(pages[id]); }catch(e){ return pages[id].title; } }
 function linkReport(){
   const items=[];
-  Object.values(db.pages).forEach(x=>{ const md=x.markdown||''; for(const m of md.matchAll(/(?<!!)\[\[([^\]|#]+)/g)){ const raw=m[1].trim(), tg=wikiTarget(raw);
+  Object.values(db.pages).forEach(x=>{ const md=x.markdown||''; for(const m of md.matchAll(/(?<!!)\[\[([^\[\]|#]+)/g)){ const raw=m[1].trim(), tg=wikiTarget(raw);
     if(!tg) items.push({label:'⚠ ['+x.title+'] → [['+raw+']]',sub:'страница не найдена',run:()=>openPage(x.id)});
     else if(!/\//.test(raw)||raw.toLowerCase()===tg.title.toLowerCase()){ const all=Object.values(db.pages).filter(p=>p.title.toLowerCase()===raw.toLowerCase());
       if(all.length>1&&all.filter(p=>p.notebookId===x.notebookId).length!==1) items.push({label:'❓ ['+x.title+'] → [['+raw+']]',sub:'неоднозначная: '+all.map(p=>(nbOf(p)||{}).name).join(', ')+' (используйте [[Книга/Страница]])',run:()=>openPage(x.id)}); } } });
@@ -3238,7 +3251,7 @@ stampNbs(); applyRibbon(); renderHome(); favUI();
   function miniGraph(){
     const ps=Object.values(db.pages).sort((a,b)=>(b.updatedAt||0)-(a.updatedAt||0)).slice(0,120); if(!ps.length) return '<div class="text-muted text-sm">Страниц пока нет</div>';
     const idx={}; ps.forEach((x,i)=>idx[x.title.toLowerCase()]=i); const E=[], gp=db.gpos||{};
-    ps.forEach((x,i)=>{ const re=/\[\[([^\]|#]+)/g; let m; while(m=re.exec(x.markdown||'')){ const j=idx[m[1].trim().toLowerCase()]; if(j!=null&&j!==i) E.push([i,j]); } });
+    ps.forEach((x,i)=>{ const re=/\[\[([^\[\]|#]+)/g; let m; while(m=re.exec(x.markdown||'')){ const j=idx[m[1].trim().toLowerCase()]; if(j!=null&&j!==i) E.push([i,j]); } });
     const byTag={}; ps.forEach((x,i)=>(x.tags||[]).forEach(t=>{ const k=String(t).toLowerCase(); (byTag[k]=byTag[k]||[]).push(i); })); const TE=[]; Object.values(byTag).forEach(a=>{ for(let u=1;u<a.length;u++) TE.push([a[u-1],a[u]]); });
     const N=ps.map((x,i)=>{ const g=gp[x.id]; return {x:g?g[0]:300+Math.cos(i*2.4)*(60+i*3),y:g?g[1]:200+Math.sin(i*2.4)*(60+i*3),vx:0,vy:0,fix:!!g}; });
     for(let it=0;it<150;it++){ for(let i=0;i<N.length;i++) for(let j=i+1;j<N.length;j++){ const a=N[i],b=N[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy)||1,f=2500/(d*d); a.vx+=dx/d*f; a.vy+=dy/d*f; b.vx-=dx/d*f; b.vy-=dy/d*f; }
@@ -3465,7 +3478,7 @@ stampNbs(); applyRibbon(); renderHome(); favUI();
       let md=_h.call(this,d.innerHTML,pages); return md.replace(/[ \t]*\uE000([a-z0-9]+)\uE001/g,' ^$1').replace(/\uE000|\uE001/g,''); }; }
   /* ---------- extracting target content ---------- */
   const locked=p=>{ try{ return keyIdOf(p)&&!isOpen(p); }catch(e){ return false; } };
-  const plain=s=>String(s||'').replace(ANC,'');
+  const plain=s=>String(s||'').replace(ANC,'').replace(/(?:[ \t]+\{(?:align|indent|first)=[\w-]+\})+[ \t]*$/,'');
   function mdLines(p){ return String(p.markdown||'').split('\n'); }
   function fnMd(p,block){ /* returns markdown fragment (anchors kept) */
     if(p.mode==='flow'){ return null; }
@@ -3499,7 +3512,7 @@ stampNbs(); applyRibbon(); renderHome(); favUI();
     bindInner(c); try{ resolveImgs(c); }catch(e){} return c; }
   function renderFn(){ setupPanel(); const fb=$('fnBox'); if(!fb) return; fb.innerHTML=''; const page=db.pages[currentPageId];
     if(cur&&db.pages[cur.pid]) fb.appendChild(card(db.pages[cur.pid],cur.block,true));
-    const links=[]; if(page&&!locked(page)){ const re=/\[\[([^\]|#]+)(?:#([^\]|]+))?(?:\|[^\]]*)?\]\]/g; let m, md=page.mode==='flow'?(page.blocks||[]).map(b=>b.html||'').join(' '):(page.markdown||'');
+    const links=[]; if(page&&!locked(page)){ const re=/\[\[([^\[\]|#]+)(?:#([^\]|]+))?(?:\|[^\]]*)?\]\]/g; let m, md=page.mode==='flow'?(page.blocks||[]).map(b=>b.html||'').join(' '):(page.markdown||'');
       while(m=re.exec(md)){ const t=wikiTarget(m[1]); if(!t) continue; const k=t.id+'#'+(m[2]||''); if(cur&&k===cur.pid+'#'+(cur.block||'')) continue; if(!links.some(x=>x.k===k)) links.push({k,p:t,block:m[2]||''}); } }
     if(links.length){ const h=document.createElement('div'); h.className='fn-sec'; h.textContent='Ссылки на этой странице · '+links.length; fb.appendChild(h); links.forEach(x=>fb.appendChild(card(x.p,x.block,false))); }
     else if(!cur){ fb.innerHTML='<div class="fn-empty">На этой странице пока нет внутренних ссылок. Выделите текст и вставьте внутреннюю ссылку — здесь появится текст, на который она ведёт.</div>'; } }
@@ -3533,13 +3546,13 @@ stampNbs(); applyRibbon(); renderHome(); favUI();
       if(first) first.scrollIntoView({behavior:db.settings.eink?'auto':'smooth',block:'center'}); },150); return; } return _n.apply(this,arguments); }; }
   /* refresh panel when page changes */
   { const _rb=renderBacklinks; renderBacklinks=function(){ _rb.apply(this,arguments); try{ const L=$('backlinksList'), c=db.pages[currentPageId]; if(L&&c){ [...L.children].filter(r=>!r.classList.contains('fn-ctx')).forEach(r=>{ const el=r.classList.contains('bl-row')?r.firstElementChild:r; if(!el||r.nextElementSibling&&r.nextElementSibling.classList.contains('fn-ctx')) return; const t=el.textContent.replace(/^📄\s*/,'').trim(), p=Object.values(db.pages).find(x=>x.title===t&&x.id!==c.id); if(!p||locked(p)) return;
-        const line=String(p.markdown||'').split('\n').find(l=>{ const re=/\[\[([^\]|#]+)/g; let m; while(m=re.exec(l)){ if(m[1].trim().toLowerCase()===c.title.toLowerCase()) return true; } return false; }); if(!line) return;
+        const line=String(p.markdown||'').split('\n').find(l=>{ const re=/\[\[([^\[\]|#]+)/g; let m; while(m=re.exec(l)){ if(m[1].trim().toLowerCase()===c.title.toLowerCase()) return true; } return false; }); if(!line) return;
         const d=document.createElement('div'); d.className='fn-ctx'; d.innerHTML=mdToHtml(line); d.querySelectorAll('a').forEach(a=>a.replaceWith(Object.assign(document.createElement('mark'),{textContent:a.textContent}))); r.after(d); }); } renderFn(); }catch(e){} }; }
   /* ---------- link picker: choose paragraphs ---------- */
   let lpChosen=new Set(), lpPage=null;
   const selEl=$('lp-blocks'); const box=document.createElement('div'); box.id='lpParas'; box.className='lp-paras'; selEl.after(box); selEl.style.display='none';
   function lpItems(p){ if(p.mode==='flow') return (p.blocks||[]).map(b=>({key:b.id,id:b.id,txt:b.type==='table'?'Таблица':(stripHtml(b.html||'').slice(0,120)||'Текст')}));
-    const out=[]; let code=false; mdLines(p).forEach((l,i)=>{ if(/^```/.test(l)){ code=!code; return; } if(code||!l.trim()||/^\|/.test(l)||/^-{3,}$/.test(l)||/^::: /.test(l)) return; const m=l.match(ANC); out.push({key:'L'+i,line:i,id:m?m[1]:null,txt:plain(l).replace(/^(#{1,6} |> |[-*+] (\[[ xX]\] )?|\d+\. )/,'').replace(/\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|([^\]]+))?\]\]/g,(a,t,b)=>b||t).replace(/[*_`~]/g,'').slice(0,140),h:/^#{1,6} /.test(l)}); }); return out; }
+    const out=[]; let code=false; mdLines(p).forEach((l,i)=>{ if(/^```/.test(l)){ code=!code; return; } if(code||!l.trim()||/^\|/.test(l)||/^-{3,}$/.test(l)||/^::: /.test(l)) return; const m=l.match(ANC); out.push({key:'L'+i,line:i,id:m?m[1]:null,txt:plain(l).replace(/^(#{1,6} |> |[-*+] (\[[ xX]\] )?|\d+\. )/,'').replace(/\[\[([^\[\]|#]+)(?:#[^\]|]*)?(?:\|([^\]]+))?\]\]/g,(a,t,b)=>b||t).replace(/[*_`~]/g,'').slice(0,140),h:/^#{1,6} /.test(l)}); }); return out; }
   function renderParas(p){ lpPage=p; lpChosen=new Set(); if(!p){ box.innerHTML=''; return; } if(locked(p)){ box.innerHTML='<div class="lp-ph">🔒 Страница защищена — можно сослаться только на всю страницу.</div>'; return; }
     const its=lpItems(p); box.innerHTML=`<div class="lp-ph">Ссылка на абзацы <span>(не отмечено — вся страница)</span></div><div class="lp-list">${its.map(x=>`<label class="lp-it${x.h?' h':''}"><input type="checkbox" data-k="${x.key}"><span>${escapeHtml(x.txt)||'…'}</span></label>`).join('')||'<div class="lp-ph">Страница пустая</div>'}</div>`;
     box.querySelectorAll('input').forEach(c=>c.onchange=()=>{ c.checked?lpChosen.add(c.dataset.k):lpChosen.delete(c.dataset.k); }); }
@@ -3794,6 +3807,438 @@ code.qcopied{ outline:2px solid #22c55e; outline-offset:1px; transition:outline-
       r.insertNode(span); const sp2=document.createTextNode('\u00a0'); span.after(sp2); const nr=document.createRange(); nr.setStartAfter(sp2); nr.collapse(true); sl.removeAllRanges(); sl.addRange(nr); }
     mdPreviewEl.dispatchEvent(new Event('input',{bubbles:true}));
   };
+})();
+</script>
+<style id="qx-r11css">
+/* --- отступы абзацев --- */
+#mdPreview [data-ind], .fn-body [data-ind], .qfn-b [data-ind]{ border-left:2px solid color-mix(in srgb, var(--accent, #7c3aed) 40%, transparent); padding-left:.75em; opacity:.86; }
+#mdPreview [data-ind="1"], .fn-body [data-ind="1"]{ margin-left:1.5em; }
+#mdPreview [data-ind="2"], .fn-body [data-ind="2"]{ margin-left:3em; }
+#mdPreview [data-ind="3"], .fn-body [data-ind="3"]{ margin-left:4.5em; }
+#mdPreview [data-ind="4"], .fn-body [data-ind="4"]{ margin-left:6em; }
+#mdPreview [data-ind="5"], .fn-body [data-ind="5"]{ margin-left:7.5em; }
+#mdPreview [data-ind="6"], .fn-body [data-ind="6"]{ margin-left:9em; }
+#mdPreview [data-ind="7"], .fn-body [data-ind="7"]{ margin-left:10.5em; }
+#mdPreview [data-ind="8"], .fn-body [data-ind="8"]{ margin-left:12em; }
+@media (max-width:600px){
+  #mdPreview [data-ind="1"], .fn-body [data-ind="1"]{ margin-left:.8em; }
+  #mdPreview [data-ind="2"], .fn-body [data-ind="2"]{ margin-left:1.6em; }
+  #mdPreview [data-ind="3"], .fn-body [data-ind="3"]{ margin-left:2.4em; }
+  #mdPreview [data-ind="4"], .fn-body [data-ind="4"]{ margin-left:3.2em; }
+  #mdPreview [data-ind="5"], .fn-body [data-ind="5"]{ margin-left:4em; }
+  #mdPreview [data-ind="6"], .fn-body [data-ind="6"]{ margin-left:4.8em; }
+  #mdPreview [data-ind="7"], .fn-body [data-ind="7"]{ margin-left:5.6em; }
+  #mdPreview [data-ind="8"], .fn-body [data-ind="8"]{ margin-left:6.4em; }
+}
+#mdPreview [data-first="1"], .fn-body [data-first="1"]{ text-indent:2em; }
+
+/* --- кнопки как в Telegram --- */
+a.qbtn, span.qbtn{ display:inline-flex; align-items:center; justify-content:center; gap:6px; position:relative; min-height:28px; padding:3px 14px; margin:1px 2px; border-radius:9px;
+  font-weight:600; font-size:.92em; line-height:1.25; text-decoration:none!important; text-indent:0; cursor:pointer; vertical-align:baseline; -webkit-user-select:none; user-select:none;
+  max-width:100%; box-sizing:border-box; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; transition:filter .15s, transform .08s; }
+a.qbtn:hover{ filter:brightness(1.07); } a.qbtn:active{ transform:scale(.98); }
+a.qbtn.qb-gray, span.qbtn.qb-gray{ background:rgba(127,127,127,.2)!important; color:inherit!important; }
+a.qbtn.qb-blue, span.qbtn.qb-blue{ background:#3390ec!important; color:#fff!important; }
+a.qbtn.qb-green, span.qbtn.qb-green{ background:#2fa84f!important; color:#fff!important; }
+a.qbtn.qb-red, span.qbtn.qb-red{ background:#e5484d!important; color:#fff!important; }
+a.qbtn::after{ content:''; position:absolute; top:4px; right:5px; width:9px; height:9px; background:currentColor; opacity:.75; -webkit-mask:var(--qbi) center/contain no-repeat; mask:var(--qbi) center/contain no-repeat; }
+a.qbtn[href^="http"], a.qbtn[target="_blank"]{ --qbi:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3 1h6v6M9 1L1.5 8.5' fill='none' stroke='black' stroke-width='1.6'/%3E%3C/svg%3E"); }
+a.qbtn.qcopy{ --qbi:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Crect x='3.2' y='.8' width='6' height='6' rx='1' fill='none' stroke='black' stroke-width='1.3'/%3E%3Cpath d='M1.8 3v5.6a.6.6 0 0 0 .6.6H7' fill='none' stroke='black' stroke-width='1.3'/%3E%3C/svg%3E"); }
+a.qbtn.wikilink{ --qbi:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3.5 1.5L7 5 3.5 8.5' fill='none' stroke='black' stroke-width='1.6'/%3E%3C/svg%3E"); }
+a.qbtn:not(.qcopy):not(.wikilink):not([href^="http"]):not([target="_blank"])::after{ display:none; }
+p.qbtnrow{ display:flex; flex-wrap:wrap; gap:6px; margin:6px 0!important; text-indent:0!important; }
+p.qbtnrow > a.qbtn, p.qbtnrow > span.qs{ flex:1 1 0; min-width:84px; margin:0; min-height:38px; padding:7px 16px; border-radius:10px; }
+p.qbtnrow > span.qs > a.qbtn{ width:100%; margin:0; min-height:38px; }
+a.qcopy:not(.qbtn){ text-decoration:underline dotted; cursor:copy; color:var(--accent); }
+#mdPreview a[href]:not(.qbtn):not(.wikilink):not(.wikilink-missing):not(.qcopy), .fn-body a[href]:not(.qbtn):not(.wikilink):not(.wikilink-missing):not(.qcopy){ color:var(--accent); text-decoration:underline; text-underline-offset:2px; }
+
+/* --- плавающая панель ссылки --- */
+#qxLB{ position:fixed; z-index:140; display:flex; align-items:center; gap:2px; padding:4px; border-radius:12px; background:var(--surface,#fff); color:var(--text,#111);
+  border:1px solid var(--line, var(--border, rgba(0,0,0,.15))); box-shadow:0 10px 30px rgba(0,0,0,.22); max-width:calc(100vw - 16px); font-size:13px; }
+#qxLB.hidden{ display:none!important; }
+#qxLB .lb-t{ max-width:220px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; opacity:.65; padding:0 6px; font-size:12px; }
+#qxLB button{ padding:6px 9px; border-radius:8px; white-space:nowrap; color:inherit; background:transparent; }
+#qxLB button:hover{ background:rgba(127,127,127,.15); }
+#qxLB button[data-lb="unlink"]{ color:#e5484d; }
+@media (max-width:480px){ #qxLB .lb-t{ display:none; } #qxLB button{ padding:6px 7px; } }
+
+/* --- диалог ссылки/кнопки --- */
+#lp-view{ display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin:2px 0 10px; font-size:13px; }
+#lp-view .lp-k{ opacity:.7; min-width:34px; }
+#lp-colors{ display:flex; gap:6px; flex-wrap:wrap; margin:-2px 0 10px; }
+#lp-colors.hidden{ display:none; }
+#lp-colors button{ display:inline-flex; align-items:center; gap:6px; padding:5px 12px 5px 8px; border-radius:999px; border:1.5px solid transparent; background:rgba(127,127,127,.12); font-size:13px; color:inherit; }
+#lp-colors button i{ width:14px; height:14px; border-radius:50%; display:inline-block; }
+#lp-colors button.on{ border-color:var(--accent,#3390ec); background:color-mix(in srgb, var(--accent,#3390ec) 14%, transparent); font-weight:600; }
+#lp-prev{ margin:0 0 10px; }
+#lp-prev.hidden{ display:none; }
+#lp-prev .qbtn{ width:100%; cursor:default; }
+#lp-copy textarea{ min-height:70px; resize:vertical; }
+#lp-unlink{ margin-top:10px; width:100%; padding:7px 10px; border-radius:10px; color:#e5484d; border:1px solid rgba(229,72,77,.45); background:transparent; font-size:13px; }
+#lp-unlink.hidden{ display:none; }
+#linkPickerModal .seg-btn{ flex:1 1 0; text-align:center; }
+.rb-btn.rb-dim{ opacity:.45; }
+table.qx-keys{ border-collapse:collapse; margin-top:4px; font-size:13px; }
+table.qx-keys td{ padding:2px 10px 2px 0; vertical-align:top; border:none!important; }
+table.qx-keys kbd{ font-family:inherit; font-size:12px; padding:1px 6px; border-radius:5px; border:1px solid rgba(127,127,127,.4); background:rgba(127,127,127,.1); white-space:nowrap; }
+</style>
+<script id="qx-r11">
+(function(){
+  const $=id=>document.getElementById(id);
+  const QK=['size','color','bg','font'], BTNC=['gray','blue','green','red'];
+  const BTN_NAME={gray:'Серая',blue:'Голубая',green:'Зелёная',red:'Красная'};
+  const P0='\uE010', P1='\uE011';
+  const MAC=/Mac|iPhone|iPad|iPod/i.test(navigator.platform||navigator.userAgent||'');
+  window.qxIsMac=MAC;
+
+  /* ================= 1. Разбор атрибутов {k=v k="v"} ================= */
+  function scanAttr(s,i){
+    if(s[i]!=='{') return null; let j=i+1; const list=[];
+    for(let g=0;g<40;g++){
+      while(s[j]===' '||s[j]==='\t') j++;
+      if(s[j]==='}') break;
+      const m=/^[a-z][a-z0-9_-]*/.exec(s.slice(j,j+40)); if(!m) return null;
+      const k=m[0]; j+=k.length; let v='';
+      if(s[j]==='='){ j++;
+        if(s[j]==='"'){ j++; let out='';
+          for(;;){ const c=s[j]; if(c===undefined||c==='\n') return null;
+            if(c==='\\'){ const d=s[j+1]; if(d===undefined) return null; out+=d==='n'?'\n':d; j+=2; continue; }
+            if(c==='"'){ j++; break; } out+=c; j++; }
+          v=out;
+        } else { const m2=/^[^\s"{}]+/.exec(s.slice(j,j+200)); if(!m2) return null; v=m2[0]; j+=v.length; }
+      }
+      if(s[j]!==' '&&s[j]!=='\t'&&s[j]!=='}') return null;
+      list.push([k,v]);
+    }
+    if(s[j]!=='}'||!list.length) return null;
+    if(!list.some(([k])=>QK.includes(k)||k==='btn'||k==='copy')) return null;
+    return {end:j+1,list};
+  }
+  window.qxScanAttr=scanAttr;
+  function qxQ(v){ v=String(v==null?'':v); return /^[#\w-]+$/.test(v)?v:'"'+v.replace(/\\/g,'\\\\').replace(/"/g,'\\"').replace(/\n/g,'\\n')+'"'; }
+  window.qxQ=qxQ;
+  function extract(text){ const store=[]; let out='', i=0;
+    while(i<text.length){ const c=text[i];
+      if(c==='`'){ const k=text.indexOf('`',i+1); if(k>i+1){ out+=text.slice(i,k+1); i=k+1; continue; } }
+      if(c==='{'){ const r=scanAttr(text,i); if(r){ store.push({list:r.list,raw:text.slice(i,r.end)}); out+=P0+(store.length-1)+P1; i=r.end; continue; } }
+      out+=c; i++; }
+    return {out,store}; }
+  function attrsObj(list){ const o={q:{},btn:null,copy:null,x:[]};
+    list.forEach(([k,v])=>{
+      if(k==='size'){ if(/^\d+$/.test(v)&&+v>=9&&+v<=50) o.q.size=v; }
+      else if(k==='color'||k==='bg'){ if(/^#[0-9a-fA-F]{3,8}$/.test(v)) o.q[k]=v; }
+      else if(k==='font'){ if(QFONTS[v]) o.q.font=v; }
+      else if(k==='btn') o.btn=BTNC.includes(v)?v:'gray';
+      else if(k==='copy') o.copy=v;
+      else o.x.push(k+(v!==''?'='+qxQ(v):''));
+    }); return o; }
+  const spanQ=(q,inner)=>Object.keys(q).length?'<span class="qs"'+Object.entries(q).map(([k,v])=>` data-${k}="${v}"`).join('')+` style="${qsStyleStr(q)}">${inner}</span>`:inner;
+  const btnAttrs=o=>(o.btn?` data-btn="${o.btn}" contenteditable="false"`:'')+(o.x.length?` data-qx-x="${escapeHtml(o.x.join(' '))}"`:'');
+  function backBracket(h,p){ /* h[p] === ']' ; returns index of matching '[' */
+    let d=0; for(let k=p;k>=0;k--){ const ch=h[k];
+      if(ch==='>'){ const lt=h.lastIndexOf('<',k); if(lt<0) return -1; k=lt; continue; }
+      if(ch===']') d++; else if(ch==='['){ d--; if(d===0) return k; } }
+    return -1; }
+  function post(h,store){
+    /* соседние блоки {..}{..} объединяем */
+    h=h.replace(/\uE010(\d+)\uE011\uE010(\d+)\uE011/g,(m,a,b)=>{ store[a].list=store[a].list.concat(store[b].list); store[a].raw+=store[b].raw; return P0+a+P1; });
+    for(let guard=0;guard<200;guard++){
+      const m=/\uE010(\d+)\uE011/.exec(h); if(!m) break;
+      const p=m.index, e=p+m[0].length, it=store[+m[1]], o=attrsObj(it.list);
+      let done=false;
+      if(h.slice(Math.max(0,p-4),p)==='</a>'){
+        const a0=Math.max(h.lastIndexOf('<a ',p),h.lastIndexOf('<a>',p));
+        if(a0>=0&&(o.btn||o.x.length||Object.keys(o.q).length)){
+          let tag=h.slice(a0,h.indexOf('>',a0)+1), body=h.slice(a0+tag.length,p);
+          if(o.btn){ tag=/class="/.test(tag)?tag.replace(/class="/,`class="qbtn qb-${o.btn} `):tag.replace(/^<a/,`<a class="qbtn qb-${o.btn}"`); }
+          tag=tag.replace(/>$/,btnAttrs(o)+'>');
+          h=h.slice(0,a0)+spanQ(o.q,tag+body)+h.slice(e); done=true;
+        }
+      } else if(h[p-1]===']'){
+        const b=backBracket(h,p-1);
+        if(b>=0&&(o.copy!=null||o.btn||Object.keys(o.q).length)){
+          let inner=h.slice(b+1,p-1);
+          if(o.copy!=null||o.btn) inner=`<a class="${o.copy!=null?'qcopy':''}${o.btn?(o.copy!=null?' ':'')+'qbtn qb-'+o.btn:''}" href="#"${o.copy!=null?` data-copy="${escapeHtml(o.copy)}"`:''}${btnAttrs(o)}>${inner}</a>`;
+          h=h.slice(0,b)+spanQ(o.q,inner)+h.slice(e); done=true;
+        }
+      }
+      if(!done) h=h.slice(0,p)+escapeHtml(it.raw)+h.slice(e);
+    }
+    return h; }
+  inlineMd=function(text){ const x=extract(String(text||'')); return post(inlineMdBase(x.out),x.store); };
+
+  /* ---- сериализация ссылок/кнопок ---- */
+  window.qxAttr=function(n){ const t=[];
+    if(n.classList.contains('qcopy')) t.push('copy='+qxQ(n.dataset.copy||''));
+    if(n.classList.contains('qbtn')) t.push('btn='+(BTNC.includes(n.dataset.btn)?n.dataset.btn:'gray'));
+    if(n.dataset.qxX&&t.length) t.push(n.dataset.qxX);
+    return t.length?'{'+t.join(' ')+'}':''; };
+
+  /* ---- qsFlatten: ссылка внутри оформления → оформление снаружи ссылки ---- */
+  { const _qf=qsFlatten; qsFlatten=function(root){ _qf(root);
+      root.querySelectorAll('a').forEach(a=>{ const kids=[...a.childNodes].filter(x=>!(x.nodeType===3&&!x.nodeValue));
+        if(!kids.length||!kids.every(x=>x.nodeType===1&&x.classList.contains('qs'))) return;
+        const key=x=>QK.map(k=>x.dataset[k]||'').join('|'); if(new Set(kids.map(key)).size!==1) return;
+        const sp=document.createElement('span'); sp.className='qs'; QK.forEach(k=>{ if(kids[0].dataset[k]) sp.dataset[k]=kids[0].dataset[k]; });
+        kids.forEach(k=>{ while(k.firstChild) a.insertBefore(k.firstChild,k); k.remove(); });
+        a.replaceWith(sp); sp.appendChild(a); });
+      /* оформление вокруг одной ссылки, лежащее внутри другого оформления, уже расплющено выше */
+    }; }
+
+  /* ---- починка испорченных строк ---- */
+  const QA='((?:\\s*(?:size|color|bg|font)=[#\\w-]+)+)\\s*';
+  const RE_NEST=new RegExp('\\[\\[([^\\[\\]\\n]*)\\]\\{'+QA+'\\}\\]\\{'+QA+'\\}');
+  function mergeQ(outer,inner){ const o={}; (outer+' '+inner).trim().split(/\s+/).forEach(kv=>{ const i=kv.indexOf('='); if(i>0) o[kv.slice(0,i)]=kv.slice(i+1); }); return QK.filter(k=>o[k]).map(k=>k+'='+o[k]).join(' '); }
+  function repairLine(l){ let s=l, prev;
+    for(let g=0;g<20&&s!==prev;g++){ prev=s;
+      s=s.replace(/(^|[^!\]])\[([^\[\]\n]*)\]\(\s*\)/g,'$1$2');
+      s=s.replace(RE_NEST,(m,t,a,b)=>'['+t+']{'+mergeQ(b,a)+'}'); }
+    return s; }
+  function repairMd(md){ let code=false; return String(md||'').split('\n').map(l=>{ if(/^\s*```/.test(l)){ code=!code; return l; } if(code||l.indexOf('](')<0&&l.indexOf(']{')<0) return l; return repairLine(l); }).join('\n'); }
+  window.qxRepairMd=repairMd;
+
+  /* ================= 2. Отступы: {indent=N} {first=1} ================= */
+  const SFX=/[ \t]+(\{(?:align=(?:left|center|right|justify)|indent=[1-8]|first=1)\}|\^[a-z0-9]{3,12})[ \t]*$/;
+  function splitSfx(l){ const r={al:'',ind:'',first:'',anc:'',body:l,n:0}; let m;
+    for(let g=0;g<8&&(m=r.body.match(SFX));g++){ const t=m[1]; r.n++;
+      if(t[0]==='^'){ if(!r.anc) r.anc=t.slice(1); }
+      else{ const [k,v]=t.slice(1,-1).split('='); if(k==='align'){ if(!r.al) r.al=v; } else if(k==='indent'){ if(!r.ind) r.ind=v; } else r.first='1'; }
+      r.body=r.body.slice(0,m.index); }
+    return r; }
+  const sfxStr=r=>(r.ind?' {indent='+r.ind+'}':'')+(r.first?' {first=1}':'')+(r.al&&r.al!=='left'?' {align='+r.al+'}':'')+(r.anc?' ^'+r.anc:'');
+  { const _m=mdToHtml; mdToHtml=function(md){ let code=false;
+      md=String(md||'').split('\n').map(l=>{ if(/^\s*```/.test(l)){ code=!code; return l; } if(code||l.indexOf('{')<0) return l;
+        const r=splitSfx(l); if(!r.al&&!r.ind&&!r.first) return l;
+        return r.body+'\uE020'+r.al+'|'+r.ind+'|'+r.first+'\uE021'+(r.anc?' ^'+r.anc:''); }).join('\n');
+      let h=_m.call(this,md);
+      h=h.replace(/<(p|h[1-6]|li|blockquote)((?:\s[^>]*)?)>((?:(?!<\/\1>)[\s\S])*?)\uE020([a-z]*)\|(\d?)\|(1?)\uE021/g,(m,t,at,body,al,ind,f)=>
+        `<${t}${at}${al&&al!=='left'?` data-al="${al}" style="text-align:${al}"`:''}${ind?` data-ind="${ind}"`:''}${f?' data-first="1"':''}>${body}`);
+      h=h.replace(/\uE020[^\uE021]*\uE021/g,'');
+      h=h.replace(/<p((?:\s[^>]*)?)>((?:(?!<\/p>)[\s\S])*?)<\/p>/g,(m,at,body)=>{ if(body.indexOf('qbtn')<0||/class=/.test(at)) return m;
+        const rest=body.replace(/<a\b[^>]*\bqbtn\b[^>]*>[\s\S]*?<\/a>/g,'').replace(/<\/?span[^>]*>/g,'').replace(/&nbsp;|\s|<br\s*\/?>/g,'');
+        return rest?m:`<p class="qbtnrow"${at}>${body}</p>`; });
+      return h; }; }
+  function fixMd(md){ let code=false;
+    return String(md||'').split('\n').map(l=>{ if(/^\s*```/.test(l)){ code=!code; return l; } if(code) return l;
+      let ind='', first='';
+      if(l.indexOf('\uE030')>=0){ l=l.replace(/\uE030(\d?)\|(1?)\uE031/g,(m,a,b)=>{ if(a) ind=a; if(b) first='1'; return ''; }); }
+      if(!ind&&!first&&!/[ \t](\{(?:align|indent|first)=|\^[a-z0-9]{3,12}[ \t]*$)/.test(l)) return l;
+      /* маркер стоял перед суффиксами: собираем все суффиксы, в т.ч. уже записанные */
+      const r=splitSfx(l); if(ind) r.ind=ind; if(first) r.first='1';
+      if(!r.n&&!ind&&!first) return l;
+      return r.body.replace(/[ \t]+$/,'')+sfxStr(r); }).join('\n'); }
+  { const _h=htmlToMd; htmlToMd=function(html,pages){ let s=String(html||'');
+      if(/data-(ind|first)=/.test(s)){ const d=document.createElement('div'); d.innerHTML=s;
+        d.querySelectorAll('[data-ind],[data-first]').forEach(e=>{ const ind=+e.dataset.ind||0, f=e.dataset.first==='1'; e.removeAttribute('data-ind'); e.removeAttribute('data-first');
+          if(!/^(P|H[1-6]|LI|BLOCKQUOTE)$/.test(e.tagName)||!e.textContent.trim()||(!ind&&!f)) return;
+          e.appendChild(document.createTextNode('\uE030'+(ind>=1&&ind<=8?ind:'')+'|'+(f?'1':'')+'\uE031')); });
+        s=d.innerHTML; }
+      return fixMd(_h.call(this,s,pages)); }; }
+
+  function indTargets(){ const l=alTargets()||[]; return l.filter(e=>/^(P|H[1-6]|BLOCKQUOTE)$/.test(e.tagName)&&!e.closest('pre,table,.qwin,.qbar')); }
+  function qxIndent(d){ const l=indTargets(); if(!l.length){ toast('Поставьте курсор в обычный абзац (не в список, таблицу или код)','warn'); return false; }
+    l.forEach(e=>{ const v=Math.max(0,Math.min(8,(+e.dataset.ind||0)+d)); if(v) e.dataset.ind=String(v); else e.removeAttribute('data-ind'); });
+    syncFromPreview(); return true; }
+  function qxFirst(){ const l=indTargets(); if(!l.length){ toast('Поставьте курсор в обычный абзац','warn'); return; }
+    const on=!l.every(e=>e.dataset.first==='1'); l.forEach(e=>{ if(on) e.dataset.first='1'; else e.removeAttribute('data-first'); });
+    syncFromPreview(); toast(on?'¶ Красная строка включена':'Красная строка убрана'); }
+  window.qxIndent=qxIndent; window.qxFirst=qxFirst;
+  mdPreviewEl.addEventListener('keydown',e=>{
+    if(e.key!=='Tab'||e.ctrlKey||e.metaKey||e.altKey||e.defaultPrevented) return;
+    const n=getSelection().anchorNode, el=n&&(n.nodeType===1?n:n.parentElement); if(!el||!mdPreviewEl.contains(el)||el.closest('li,td,th,pre,code,.qwin,.qbar')) return;
+    const b=el.closest('p,h1,h2,h3,h4,h5,h6,blockquote'); if(!b||!mdPreviewEl.contains(b)) return;
+    e.preventDefault(); qxIndent(e.shiftKey?-1:1); });
+  document.querySelectorAll('[data-ind-a]').forEach(b=>{ b.addEventListener('mousedown',e=>e.preventDefault()); b.onclick=()=>{ const a=b.dataset.indA; if(a==='first') qxFirst(); else qxIndent(a==='in'?1:-1); }; });
+
+  /* ================= ряды кнопок в редакторе ================= */
+  function isBtnOnly(p){ let n=0; for(const c of p.childNodes){
+      if(c.nodeType===3){ if(c.nodeValue.replace(/[\s\u00a0]/g,'')) return false; continue; }
+      if(c.nodeType!==1) continue; if(c.tagName==='BR') continue;
+      if(c.matches('a.qbtn')){ n++; continue; }
+      if(c.matches('span.qs')&&c.children.length===1&&c.firstElementChild.matches('a.qbtn')&&!c.textContent.replace(c.firstElementChild.textContent,'').trim()){ n++; continue; }
+      return false; }
+    return n>0; }
+  function qbRows(root){ (root||mdPreviewEl).querySelectorAll('p').forEach(p=>p.classList.toggle('qbtnrow',isBtnOnly(p))); }
+  window.qxBtnRows=qbRows;
+  let _rowT=0; mdPreviewEl.addEventListener('input',()=>{ cancelAnimationFrame(_rowT); _rowT=requestAnimationFrame(()=>qbRows()); });
+
+  { const _r=renderMdPreview; renderMdPreview=function(){ const page=db.pages[currentPageId];
+      if(page&&page.markdown&&(page.markdown.indexOf('](')>=0||page.markdown.indexOf(']{')>=0)){ const fx=repairMd(page.markdown);
+        if(fx!==page.markdown){ page.markdown=fx; page.updatedAt=Date.now(); try{ mdTextarea.value=fx; }catch(e){} try{ if(keyIdOf(page)){ DIRTY.add(page); encSoon(page); } }catch(e){} saveDB(); } }
+      lbHide(); const r=_r.apply(this,arguments); qbRows(); return r; }; }
+
+  /* ================= 4. Плавающая панель ссылки ================= */
+  const LB=document.createElement('div'); LB.id='qxLB'; LB.setAttribute('contenteditable','false'); LB.className='hidden';
+  document.body.appendChild(LB); let lbA=null;
+  function lbHide(){ LB.classList.add('hidden'); lbA=null; }
+  window.qxLinkBarHide=lbHide;
+  function linkKind(a){ if(a.classList.contains('qcopy')) return 'copy'; if(a.dataset.linkPage||a.dataset.createTitle||a.classList.contains('wikilink')) return 'int'; return 'ext'; }
+  function linkInfo(a){ const k=linkKind(a);
+    if(k==='copy') return '⧉ '+(a.dataset.copy||'');
+    if(k==='int'){ const p=db.pages[a.dataset.linkPage]; const b=a.dataset.linkBlock||''; return '📄 '+(p?p.title:(a.dataset.createTitle||'?'))+(b?(b[0]==='^'?' · абзац':' · # '+b):''); }
+    return a.getAttribute('href')||''; }
+  function linkOpen(a){ const k=linkKind(a);
+    if(k==='copy'){ (window.qxCopyText||(t=>navigator.clipboard.writeText(t)))(a.dataset.copy||''); return; }
+    if(k==='int'){ if(a.dataset.linkPage&&db.pages[a.dataset.linkPage]){ navigateToLink(a.dataset.linkPage,a.dataset.linkBlock||''); return; }
+      const t=a.dataset.createTitle; if(t){ uiConfirm('Страница "'+t+'" не найдена. Создать?','Создать').then(ok=>{ if(ok){ const pg=db.pages[currentPageId]; createPage(pg?pg.notebookId:db.notebooks[0].id,null,t); } }); } else uiAlert('Страница не найдена'); return; }
+    const u=a.getAttribute('href')||''; if(!u||u==='#') return; try{ window.open(u,'_blank','noopener,noreferrer'); }catch(e){} }
+  function unlink(a){ if(!a||!a.isConnected) return false; const p=a.parentNode, kids=[...a.childNodes];
+    if(!kids.length) a.remove(); else a.replaceWith(...kids);
+    try{ const r=document.createRange(); const last=kids[kids.length-1]; if(last){ r.setStartAfter(last); r.collapse(true); const s=getSelection(); s.removeAllRanges(); s.addRange(r); } }catch(e){}
+    lbHide(); syncFromPreview(); qbRows(); toast('Ссылка убрана, текст оставлен'); return true; }
+  window.qxUnlink=unlink;
+  function lbShow(a){ lbA=a; const k=linkKind(a), btn=a.classList.contains('qbtn');
+    LB.innerHTML=`<span class="lb-t" title="${escapeHtml(linkInfo(a))}">${escapeHtml(linkInfo(a))}</span>`+
+      `<button data-lb="open">${k==='copy'?'⧉ Копировать':'↗ Открыть'}</button>`+(k==='int'&&a.dataset.linkPage?'<button data-lb="fn" title="Показать сноску">📑</button>':'')+
+      `<button data-lb="edit">✎ Изменить</button><button data-lb="unlink" title="Убрать ссылку, текст останется">⛓ Убрать${btn?' кнопку':' ссылку'}</button>`;
+    LB.classList.remove('hidden');
+    const r=a.getBoundingClientRect(), w=LB.offsetWidth, h=LB.offsetHeight;
+    let x=Math.max(8,Math.min(innerWidth-w-8,r.left+r.width/2-w/2)), y=r.bottom+6; if(y+h>innerHeight-8) y=Math.max(8,r.top-h-6);
+    LB.style.left=x+'px'; LB.style.top=y+'px'; }
+  window.qxLinkBarShow=lbShow;
+  LB.addEventListener('pointerdown',e=>{ e.preventDefault(); e.stopPropagation(); });
+  LB.addEventListener('click',e=>{ const b=e.target.closest('button'); if(!b||!lbA) return; const a=lbA, k=b.dataset.lb;
+    if(k==='open'){ lbHide(); linkOpen(a); }
+    else if(k==='fn'){ lbHide(); if(window.qOpenFn) qOpenFn(a.dataset.linkPage,a.dataset.linkBlock||''); }
+    else if(k==='edit'){ lbHide(); openLinkPicker(null,{edit:a}); }
+    else if(k==='unlink') unlink(a); });
+  const inEditorLink=t=>{ const a=t&&t.closest&&t.closest('a'); return a&&mdPreviewEl.contains(a)&&!a.closest('.qwin,.qbar')&&(a.getAttribute('href')!=null||a.classList.contains('qcopy'))?a:null; };
+  let lpSuppress=0;
+  window.addEventListener('click',e=>{ const a=inEditorLink(e.target); if(!a) return;
+    if(Date.now()<lpSuppress){ e.preventDefault(); e.stopImmediatePropagation(); return; }
+    const k=linkKind(a);
+    if(e.ctrlKey||e.metaKey){ if(k!=='int'||a.classList.contains('qbtn')){ e.preventDefault(); e.stopImmediatePropagation(); linkOpen(a); } return; }
+    if(a.classList.contains('qbtn')||k==='copy'||a.classList.contains('wikilink-missing')||k==='ext'){ e.preventDefault(); e.stopImmediatePropagation(); }
+    setTimeout(()=>lbShow(a),0); },true);
+  /* кнопки и копирование вне редактора (сноски, окна, просмотр) */
+  document.addEventListener('click',e=>{ const a=e.target.closest&&e.target.closest('a.qcopy'); if(!a||(mdPreviewEl.contains(a)&&!a.closest('.qwin'))) return; e.preventDefault(); e.stopPropagation(); linkOpen(a); });
+  /* удержание / правый клик по кнопке → диалог */
+  mdPreviewEl.addEventListener('contextmenu',e=>{ const a=inEditorLink(e.target); if(!a||!a.classList.contains('qbtn')) return; e.preventDefault(); lbHide(); openLinkPicker(null,{edit:a}); });
+  { let tm=null, sx=0, sy=0;
+    mdPreviewEl.addEventListener('pointerdown',e=>{ if(e.pointerType!=='touch') return; const a=inEditorLink(e.target); if(!a||!a.classList.contains('qbtn')) return; sx=e.clientX; sy=e.clientY; clearTimeout(tm);
+      tm=setTimeout(()=>{ tm=null; lpSuppress=Date.now()+700; lbHide(); if(navigator.vibrate) navigator.vibrate(15); openLinkPicker(null,{edit:a}); },550); });
+    const cl=()=>{ clearTimeout(tm); tm=null; };
+    mdPreviewEl.addEventListener('pointermove',e=>{ if(tm&&Math.hypot(e.clientX-sx,e.clientY-sy)>10) cl(); });
+    mdPreviewEl.addEventListener('pointerup',cl); mdPreviewEl.addEventListener('pointercancel',cl); }
+  document.addEventListener('pointerdown',e=>{ if(!LB.classList.contains('hidden')&&!LB.contains(e.target)&&!inEditorLink(e.target)) lbHide(); },true);
+  document.addEventListener('keydown',e=>{ if(!LB.classList.contains('hidden')){ if(e.key==='Escape') lbHide(); else if(!/^(Shift|Control|Alt|Meta)$/.test(e.key)) lbHide(); } },true);
+  document.addEventListener('scroll',e=>{ if(!LB.classList.contains('hidden')&&lbA){ const r=lbA.getBoundingClientRect(); if(r.bottom<0||r.top>innerHeight) lbHide(); else lbShow(lbA); } },true);
+  addEventListener('resize',()=>lbHide());
+
+  /* ================= 5. Единый диалог: ссылка или кнопка ================= */
+  const LP={view:'text',color:'blue',tab:'int',edit:null,editBlock:''};
+  const panes={int:'lp-internal',ext:'lp-external',copy:'lp-copy'}, labels={int:'lp-label',ext:'lp-ext-label',copy:'lp-copy-label'};
+  function setTab(t){ const prev=LP.tab; LP.tab=t;
+    Object.entries(panes).forEach(([k,id])=>$(id).classList.toggle('hidden',k!==t));
+    [['int','lp-tab-internal'],['ext','lp-tab-external'],['copy','lp-tab-copy']].forEach(([k,id])=>$(id).classList.toggle('active',k===t));
+    if(prev&&prev!==t){ const a=$(labels[prev]), b=$(labels[t]); if(a&&b&&!b.value&&a.value&&a.dataset.auto!=='1') b.value=a.value; }
+    viewUI(); }
+  $('lp-tab-internal').onclick=()=>setTab('int'); $('lp-tab-external').onclick=()=>setTab('ext'); $('lp-tab-copy').onclick=()=>setTab('copy');
+  function viewUI(){ const btn=LP.view==='btn';
+    document.querySelectorAll('#lp-view [data-v]').forEach(b=>b.classList.toggle('active',b.dataset.v===LP.view));
+    $('lp-colors').classList.toggle('hidden',!btn);
+    document.querySelectorAll('#lp-colors [data-c]').forEach(b=>b.classList.toggle('on',b.dataset.c===LP.color));
+    Object.values(labels).forEach(id=>{ const i=$(id); if(i) i.placeholder=btn?'Текст кнопки':'Текст ссылки'; });
+    ['lp-insert','lp-ext-insert','lp-copy-insert'].forEach(id=>{ const b=$(id); if(b) b.textContent=LP.edit?'Сохранить':(btn?'Вставить кнопку':'Вставить ссылку'); });
+    $('lp-title').textContent=LP.edit?(btn?'✎ Изменить кнопку':'✎ Изменить ссылку'):(btn?'🔘 Вставить кнопку':'🔗 Вставить ссылку');
+    $('lp-unlink').classList.toggle('hidden',!LP.edit);
+    const pv=$('lp-prev'); if(pv){ const lab=($(labels[LP.tab])||{}).value||'Кнопка'; pv.innerHTML=btn?`<span class="qbtn qb-${LP.color}">${escapeHtml(lab)}</span>`:''; pv.classList.toggle('hidden',!btn); } }
+  document.querySelectorAll('#lp-view [data-v]').forEach(b=>b.onclick=()=>{ LP.view=b.dataset.v; viewUI(); });
+  document.querySelectorAll('#lp-colors [data-c]').forEach(b=>b.onclick=()=>{ LP.color=b.dataset.c; try{ db.settings.btnColor=LP.color; }catch(e){} viewUI(); });
+  Object.values(labels).forEach(id=>{ const i=$(id); if(i) i.addEventListener('input',viewUI); });
+  function linkAtCaret(){ const sl=getSelection(); if(!sl.rangeCount) return null; const n=sl.anchorNode, el=n&&(n.nodeType===1?n:n.parentElement); return el?inEditorLink(el):null; }
+  window.qxLinkAtCaret=linkAtCaret;
+  { const _o=openLinkPicker; openLinkPicker=function(tab,opts){ opts=opts||{};
+      let a=opts.edit||null; if(!a&&!opts.fresh&&wysActive()) a=linkAtCaret();
+      LP.edit=a&&a.isConnected?a:null; LP.editBlock='';
+      if(LP.edit){ try{ const r=document.createRange(); r.selectNode(LP.edit); r.collapse(false); mdPreviewEl.focus(); const s=getSelection(); s.removeAllRanges(); s.addRange(r); }catch(e){} }
+      const kind=LP.edit?linkKind(LP.edit):(tab==='int'?'int':tab==='copy'?'copy':'ext');
+      const res=_o.call(this,kind==='int'?'int':'ext');
+      $('lp-copy-text').value=''; $('lp-copy-label').value='';
+      LP.view=LP.edit?(LP.edit.classList.contains('qbtn')?'btn':'text'):(opts.view||'text');
+      LP.color=LP.edit&&LP.edit.dataset.btn?LP.edit.dataset.btn:((db.settings&&db.settings.btnColor)||'blue');
+      if(LP.edit){ const A=LP.edit, txt=A.textContent.replace(/\u00a0/g,' ').trim();
+        if(kind==='int'){ const pid=A.dataset.linkPage, p=db.pages[pid]; const L=$('lp-label'); L.value=txt; L.dataset.auto='0';
+          if(p){ lpSelectedPage=pid; renderLinkPickerPages(); renderLinkPickerBlocks(p); const blk=A.dataset.linkBlock||'';
+            if(blk&&blk[0]==='^'){ const lines=String(p.markdown||'').split('\n');
+              blk.split(',').forEach(id=>{ id=id.trim().replace(/^\^/,''); if(!id) return; let key=null;
+                if(p.mode==='flow') key=id; else { const i=lines.findIndex(l=>new RegExp('[ \\t]\\^'+id+'[ \\t]*$').test(l)); if(i>=0) key='L'+i; }
+                const c=key&&document.querySelector('#lpParas input[data-k="'+key+'"]'); if(c){ c.checked=true; c.dispatchEvent(new Event('change')); } }); }
+            else if(blk&&p.mode==='flow'){ blk.split(',').forEach(id=>{ const c=document.querySelector('#lpParas input[data-k="'+id+'"]'); if(c){ c.checked=true; c.dispatchEvent(new Event('change')); } }); }
+            else if(blk) LP.editBlock=blk;
+            const it=[...document.querySelectorAll('#lp-pages .tree-item')].find(x=>x.classList.contains('active')); if(it) it.scrollIntoView({block:'nearest'}); } }
+        else if(kind==='copy'){ $('lp-copy-text').value=A.dataset.copy||''; $('lp-copy-label').value=txt; }
+        else { $('lp-ext-url').value=A.getAttribute('href')||''; $('lp-ext-label').value=txt; } }
+      LP.tab=null; setTab(kind); return res; }; }
+  { const _li=lpInsert; lpInsert=function(md,html){ const btn=LP.view==='btn', col=BTNC.includes(LP.color)?LP.color:'gray';
+      const t=document.createElement('template'); t.innerHTML=html; const a=t.content.querySelector('a');
+      const old=LP.edit&&LP.edit.isConnected?LP.edit:null; const extra=old&&old.dataset.qxX||'';
+      if(a){ if(btn){ a.classList.add('qbtn','qb-'+col); a.dataset.btn=col; if(old) a.setAttribute('contenteditable','false'); }
+        if(extra&&(btn||a.classList.contains('qcopy'))) a.dataset.qxX=extra;
+        if(old&&LP.editBlock&&a.dataset.linkPage===old.dataset.linkPage&&!a.dataset.linkBlock){ a.dataset.linkBlock=LP.editBlock; md=md.replace(/^\[\[([^\]|#]+)/,'[['+'$1#'+LP.editBlock); } }
+      if(btn){ const sx='btn='+col+(extra?' '+extra:''); md=/\]\{copy=/.test(md)&&/\}$/.test(md)?md.slice(0,-1)+' '+sx+'}':md+'{'+sx+'}'; }
+      if(old&&a&&wysMode()){ old.replaceWith(a); LP.edit=null; linkPickerModal.classList.add('hidden'); syncFromPreview(); renderMdPreview(); toast(btn?'Кнопка обновлена':'Ссылка обновлена'); return; }
+      let pre='';
+      try{ const R=_lpRange; if(R&&R.collapsed&&R.startContainer.nodeType===3&&R.startOffset>0&&/\S/.test(R.startContainer.nodeValue[R.startOffset-1])) pre='&nbsp;';
+        else if(R&&R.collapsed&&R.startContainer.nodeType===1&&R.startOffset>0){ const pv=R.startContainer.childNodes[R.startOffset-1]; if(pv&&(pv.nodeType===1?pv.tagName!=='BR':/\S$/.test(pv.nodeValue))) pre='&nbsp;'; } }catch(e){}
+      LP.edit=null; const r=_li.call(this,md,pre+t.innerHTML); qbRows(); return r; }; }
+  $('lp-copy-insert').onclick=()=>{ const v=$('lp-copy-text').value; if(!v.trim()){ uiAlert('Введите текст, который будет копироваться'); return; }
+    const label=$('lp-copy-label').value.trim()||v.trim().slice(0,40);
+    lpInsert('['+label+']{copy='+qxQ(v)+'}', `<a class="qcopy" href="#" data-copy="${escapeHtml(v)}">${escapeHtml(label)}</a>&nbsp;`); };
+  $('lp-unlink').onclick=()=>{ const a=LP.edit; LP.edit=null; linkPickerModal.classList.add('hidden'); if(a) unlink(a); };
+  $('closeLinkPicker').addEventListener('click',()=>{ LP.edit=null; });
+  const rbBtn=$('rbBtn'); if(rbBtn){ rbBtn.addEventListener('mousedown',e=>e.preventDefault()); rbBtn.onclick=()=>openLinkPicker('ext',{view:'btn',fresh:true}); }
+  const rbUn=$('rbUnlink'); if(rbUn){ rbUn.addEventListener('mousedown',e=>e.preventDefault()); rbUn.onclick=()=>{ const a=linkAtCaret()||lbA; if(!a){ toast('Поставьте курсор на ссылку или кнопку','warn'); return; } unlink(a); }; }
+  document.addEventListener('selectionchange',()=>{ if(rbUn) rbUn.classList.toggle('rb-dim',!linkAtCaret()); });
+
+  /* экспорт HTML: стили отступов и кнопок */
+  { const _p=pageToStandaloneHTML; pageToStandaloneHTML=function(page){ const css=($('qx-r11css')||{}).textContent||''; return _p.apply(this,arguments).replace('</style>',css.replace(/#mdPreview /g,'')+'</style>'); }; }
+
+  /* ================= 3. Сочетания клавиш ================= */
+  const K=(s)=>MAC?s.replace(/Ctrl\+/g,'⌘').replace(/Shift\+/g,'⇧').replace(/Alt\+/g,'⌥'):s;
+  window.qxKeyLabel=K;
+  const PV=()=>wysMode(), TA=()=>document.activeElement===mdTextarea;
+  const sizeStep=d=>{ const b=document.querySelector('[data-q="'+(d>0?'s+':'s-')+'"]'); if(b) b.click(); };
+  /* [сочетание, описание, селекторы кнопок, код клавиши, shift, alt, действие(null — встроенное)] */
+  const HK=[
+    ['Ctrl+B','Жирный','[data-fmt="b"]','KeyB',0,0,null],
+    ['Ctrl+I','Курсив','[data-fmt="i"]','KeyI',0,0,null],
+    ['Ctrl+U','Подчёркнутый','[data-fmt="u"]','KeyU',0,0,null],
+    ['Ctrl+Shift+X','Зачёркнутый','[data-fmt="s"]','KeyX',1,0,()=>fmt('s')],
+    ['Ctrl+E','Код (моноширинный)','[data-fmt="code"]','KeyE',0,0,()=>fmt('code')],
+    ['Ctrl+Shift+P','Скрытый текст','[data-fmt="spoil"]','KeyP',1,0,()=>fmt('spoil')],
+    ['Ctrl+Shift+K','Ссылка или кнопка','[data-fmt="url"],#btnMdLink','KeyK',1,0,()=>fmt('url')],
+    ['Ctrl+Alt+1','Заголовок 1','[data-fmt="h1"]','Digit1',0,1,()=>fmt('h1')],
+    ['Ctrl+Alt+2','Заголовок 2','[data-fmt="h2"]','Digit2',0,1,()=>fmt('h2')],
+    ['Ctrl+Alt+3','Заголовок 3','[data-fmt="h3"]','Digit3',0,1,()=>fmt('h3')],
+    ['Ctrl+Shift+8','Маркированный список','[data-fmt="ul"]','Digit8',1,0,()=>fmt('ul')],
+    ['Ctrl+Shift+7','Нумерованный список','[data-fmt="ol"]','Digit7',1,0,()=>fmt('ol')],
+    ['Ctrl+Shift+9','Задача','[data-fmt="task"]','Digit9',1,0,()=>fmt('task')],
+    ['Ctrl+Shift+.','Увеличить размер','[data-q="s+"]','Period',1,0,()=>{ if(PV()) sizeStep(1); }],
+    ['Ctrl+Shift+,','Уменьшить размер','[data-q="s-"]','Comma',1,0,()=>{ if(PV()) sizeStep(-1); }],
+    ['Ctrl+\\','Сбросить оформление','[data-q="reset"]','Backslash',0,0,()=>{ if(PV()) qsClear(); }],
+    ['Tab','Отступ абзаца','[data-ind-a="in"]',null,0,0,null],
+    ['Shift+Tab','Убрать отступ','[data-ind-a="out"]',null,0,0,null],
+    ['Ctrl+K','Поиск и команды','#btnPalette',null,0,0,null],
+    ['Ctrl+Z','Отменить',null,null,0,0,null],
+    ['Ctrl+Y / Ctrl+Shift+Z','Повторить',null,null,0,0,null]
+  ];
+  window.qxHotkeys=HK.map(h=>({keys:K(h[0]),label:h[1]}));
+  HK.forEach(h=>{ if(!h[2]) return; document.querySelectorAll(h[2]).forEach(b=>{ const base=(b.getAttribute('title')||b.textContent.trim()).replace(/\s*\([^)]*(Ctrl|⌘|Tab)[^)]*\)\s*$/,''); b.setAttribute('title',base+' ('+K(h[0])+')'); }); });
+  /* Tab в таблице — переход между ячейками (подсказка не нужна), панели: Esc закрывает */
+  window.addEventListener('keydown',e=>{
+    if(!(e.ctrlKey||e.metaKey)) return; const inPV=wysActive(), inTA=TA(); if(!inPV&&!inTA) return;
+    if(MAC&&e.ctrlKey&&!e.metaKey) return; /* на Mac — только ⌘ */
+    const code=e.code;
+    /* русская раскладка: Ctrl+B/I/U в Markdown-поле и Ctrl+K */
+    if(inTA&&!e.shiftKey&&!e.altKey&&(code==='KeyB'||code==='KeyI'||code==='KeyU')){ const k=code.slice(3).toLowerCase(); if(e.key.toLowerCase()!==k||k==='u'){ e.preventDefault(); e.stopImmediatePropagation(); MD_FMT[k](); } return; }
+    for(const h of HK){ if(!h[6]||!h[3]) continue; if(code!==h[3]||!!e.shiftKey!==!!h[4]||!!e.altKey!==!!h[5]) continue;
+      e.preventDefault(); e.stopImmediatePropagation(); try{ h[6](); }catch(x){ console.warn(x); } return; }
+  },true);
+  document.addEventListener('keydown',e=>{ if((e.ctrlKey||e.metaKey)&&!e.shiftKey&&e.code==='KeyK'&&e.key.toLowerCase()!=='k'){ e.preventDefault(); palOpen(); } });
+  /* список сочетаний в инструкции */
+  const kb=$('qxKeys'); if(kb) kb.innerHTML='<table class="qx-keys">'+window.qxHotkeys.map(x=>`<tr><td><kbd>${escapeHtml(x.keys)}</kbd></td><td>${escapeHtml(x.label)}</td></tr>`).join('')+'</table>';
+  qbRows();
 })();
 </script>
 </body>
